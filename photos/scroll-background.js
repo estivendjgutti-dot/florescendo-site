@@ -4,7 +4,8 @@
   if (!panel || !canvas) return;
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const context = canvas.getContext('2d', { alpha: false });
+  // Preserve the section blush while metadata/frame data is still loading.
+  const context = canvas.getContext('2d');
   const video = document.createElement('video');
   let ready = false;
   let progress = 0;
@@ -42,7 +43,9 @@
   function syncToScroll() {
     const rect = panel.getBoundingClientRect();
     const viewport = window.innerHeight || 1;
-    progress = Math.max(0, Math.min(1, (viewport * .82 - rect.top) / (rect.height + viewport * .3)));
+    // The sequence completes while this panel is still comfortably inside the viewport.
+    const revealDistance = Math.min(rect.height * .7, viewport * .48);
+    progress = Math.max(0, Math.min(1, (viewport * .82 - rect.top) / revealDistance));
     panel.style.setProperty('--inset', `${((1 - progress) * 50).toFixed(2)}%`);
     panel.style.setProperty('--video-opacity', (0.35 + progress * 0.65).toFixed(3));
     if (ready && Number.isFinite(video.duration) && !reducedMotion.matches) {

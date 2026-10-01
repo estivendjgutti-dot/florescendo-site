@@ -116,6 +116,8 @@
     .story { display: grid; grid-template-columns: .94fr 1.06fr; align-items: center; gap: 70px; }
     .story-media { position: relative; overflow: hidden; min-height: 510px; border: 5px solid #fff; border-radius: 220px 220px 24px 24px; background: var(--rose); box-shadow: 0 18px 55px #3d0a1f17; }
     .story-media img { position: absolute; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .story-video { position: absolute; z-index: 2; right: -14px; bottom: 44px; width: 42%; aspect-ratio: .72; overflow: hidden; border: 4px solid #fffaf7; border-radius: 90px 90px 16px 16px; box-shadow: 0 16px 36px #3d0a1f35; }
+    .story-video video { width: 100%; height: 100%; object-fit: cover; }
     .story-label { position: absolute; right: 18px; bottom: 18px; padding: 9px 14px; border-left: 2px solid var(--dourado); color: white; background: #3d0a1feb; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
     .story-copy h2 { max-width: 560px; }
     .story-copy p { margin-bottom: 16px; }
@@ -127,7 +129,7 @@
     .card:hover { transform: translateY(-5px); box-shadow: 0 20px 42px #3d0a1f17; }
     .card-media { overflow: hidden; height: 235px; background: #ead6cf; }
     .card-media img, .card-media video { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
-    .card:hover .card-media img { transform: scale(1.04); }
+    .card:hover .card-media img, .card:hover .card-media video { transform: scale(1.04); }
     .card-body { padding: 24px 25px 27px; }
     .card-body h3 { margin: 0 0 9px; color: var(--vinho-dark); font-size: 25px; font-weight: 500; }
     .card-body p { min-height: 78px; margin: 0 0 17px; color: var(--muted); }
@@ -140,8 +142,8 @@
     .portfolio-main { min-height: 500px; }
     .portfolio-side { display: grid; grid-template-rows: 1fr 1fr; gap: 18px; }
     .portfolio-small { min-height: 240px; }
-    .portfolio-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
-    .portfolio-grid a:hover img { transform: scale(1.035); }
+    .portfolio-grid img, .portfolio-grid video { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+    .portfolio-grid a:hover img, .portfolio-grid a:hover video { transform: scale(1.035); }
     .portfolio-caption { margin: 16px 0 0; color: var(--muted); text-align: center; font-size: 14px; }
 
     .care { color: var(--texto); border-top: 1px solid #5b6b3a77; background: #f7d8d5; }
@@ -154,11 +156,17 @@
     .care-card h3 { margin: 12px 0 8px; color: var(--vinho-dark); font-size: 23px; font-weight: 500; }
     .care-card p { margin: 0; color: var(--muted); }
     .care .btn { margin-top: 28px; }
-    .scroll-reveal { --inset: 50%; --video-opacity: .35; position: relative; height: clamp(250px, 42vw, 410px); margin: 38px 0 42px; overflow: hidden; border-top: 1px solid var(--dourado); border-bottom: 1px solid var(--dourado); background: var(--vinho-dark); }
+    .scroll-reveal { --inset: 50%; --video-opacity: .35; position: relative; height: clamp(250px, 42vw, 410px); margin: 38px 0 42px; overflow: hidden; border-top: 1px solid var(--dourado); border-bottom: 1px solid var(--dourado); background: transparent; }
     .scroll-reveal::before, .scroll-reveal::after { position: absolute; z-index: 2; top: 0; bottom: 0; width: 1px; content: ''; background: #5b6b3a; opacity: .72; }
     .scroll-reveal::before { left: calc(50% - 7px); } .scroll-reveal::after { right: calc(50% - 7px); }
     .scroll-reveal canvas { display: block; width: 100%; height: 100%; clip-path: inset(0 var(--inset) 0 var(--inset)); opacity: var(--video-opacity); transition: clip-path .08s linear, opacity .08s linear; }
-    .scroll-reveal-copy { position: absolute; z-index: 3; inset: auto 0 20px; padding: 0 22px; color: white; font-size: 12px; font-weight: 600; letter-spacing: .15em; text-align: center; text-transform: uppercase; text-shadow: 0 1px 8px #000; pointer-events: none; }
+    .scroll-reveal-copy { position: absolute; z-index: 3; inset: auto 50% 18px auto; width: max-content; max-width: calc(100% - 28px); padding: 8px 13px; transform: translateX(50%); border: 1px solid #c9974a99; border-radius: 999px; color: var(--vinho-dark); background: #f7d8d5dd; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-align: center; text-transform: uppercase; pointer-events: none; }
+    .motion-in { opacity: 0; transform: translateY(22px); transition: opacity .65s ease, transform .65s cubic-bezier(.2,.75,.3,1); }
+    .motion-in.is-visible { opacity: 1; transform: none; }
+    .hero-art { animation: float-mark 6s ease-in-out infinite; }
+    .ornament svg { animation: flower-breathe 4s ease-in-out infinite; }
+    @keyframes float-mark { 50% { transform: translateY(-8px); } }
+    @keyframes flower-breathe { 50% { transform: scale(1.08); } }
 
     .social { background: #fffaf7e8; }
     .social-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -223,6 +231,7 @@
       .section { padding: 72px 0; }
       .story { grid-template-columns: .9fr 1.1fr; gap: 30px; }
       .story-media { min-height: 420px; }
+      .story-video { right: 10px; bottom: 24px; width: 38%; }
       .cards { gap: 14px; }
       .card-body { padding: 20px; }
       .card-body h3 { font-size: 22px; }
@@ -251,6 +260,7 @@
       .proof-item { justify-content: flex-start; }
       .story, .contact-grid, .location { grid-template-columns: 1fr; gap: 27px; }
       .story-media { min-height: 390px; order: 0; }
+      .story-video { right: 16px; bottom: 20px; width: 39%; border-radius: 72px 72px 14px 14px; }
       .story-copy { order: 1; }
       .cards, .care-grid { grid-template-columns: 1fr; gap: 17px; }
       .card-media { height: 240px; }
@@ -270,6 +280,7 @@
       .float-wa { width: 52px; height: 52px; justify-content: center; padding: 0; font-size: 0; }
       .float-wa svg { width: 23px; height: 23px; }
       .scroll-reveal { height: 260px; margin: 30px 0; }
+      .scroll-reveal-copy { bottom: 13px; font-size: 9px; letter-spacing: .09em; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
@@ -316,8 +327,8 @@
 
     <section class="section story-section" id="historia">
       <div class="wrap story">
-        <div class="story-media"><img src="photos/idealizadora-florescendo.webp" alt="Idealizadora da Florescendo entre plantas e orquídeas" width="468" height="623" loading="lazy" decoding="async"><span class="story-label">A idealizadora da Florescendo</span></div>
-        <div class="story-copy"><span class="eyebrow">Nossa história</span><h2>Um olhar feminino para transformar o verde em presença.</h2><p>A Florescendo nasceu do desejo de tornar flores e plantas parte dos gestos mais bonitos da vida: um presente escolhido com cuidado, uma orquídea que marca um espaço, um terrário que traz respiro para a rotina.</p><p>Em dois boxes no Mercadão das Flores, a curadoria combina sensibilidade, acabamento e escuta. Cada escolha é pensada para revelar beleza sem excessos e criar uma experiência naturalmente premium.</p><div class="signature">Delicada por natureza. Especial em cada detalhe.</div></div>
+        <div class="story-media motion-in"><img src="photos/idealizadora-florescendo.webp" alt="Idealizadora da Florescendo entre plantas e orquídeas" width="468" height="623" loading="lazy" decoding="async"><div class="story-video"><video class="autoplay-video" muted loop playsinline preload="metadata" poster="photos/loja.webp" aria-label="Bastidores da Florescendo"><source src="photos/team-1.mp4" type="video/mp4"></video></div><span class="story-label">A idealizadora da Florescendo</span></div>
+        <div class="story-copy motion-in"><span class="eyebrow">Nossa história</span><h2>Um olhar feminino para transformar o verde em presença.</h2><p>A Florescendo nasceu do desejo de tornar flores e plantas parte dos gestos mais bonitos da vida: um presente escolhido com cuidado, uma orquídea que marca um espaço, um terrário que traz respiro para a rotina.</p><p>Em dois boxes no Mercadão das Flores, a curadoria combina sensibilidade, acabamento e escuta. Cada escolha é pensada para revelar beleza sem excessos e criar uma experiência naturalmente premium.</p><div class="signature">Delicada por natureza. Especial em cada detalhe.</div></div>
       </div>
       <div class="ornament" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 27V12m0 15C7 24 4 18 6 12c6 1 10 5 10 15Zm0-4c0-8 4-14 10-17 3 8 0 14-10 17Zm0-7c-5-3-7-7-6-12 5 1 8 5 6 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
     </section>
@@ -326,9 +337,9 @@
       <div class="wrap">
         <div class="section-head"><span class="eyebrow">Como podemos ajudar</span><h2>Um detalhe florido muda o jeito de viver um momento.</h2><p>Escolha o que procura. A equipe ajuda com disponibilidade, ideias e próximos passos.</p><div class="ornament" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 27V12m0 15C7 24 4 18 6 12c6 1 10 5 10 15Zm0-4c0-8 4-14 10-17 3 8 0 14-10 17Zm0-7c-5-3-7-7-6-12 5 1 8 5 6 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
         <div class="cards">
-          <article class="card"><div class="card-media"><img src="photos/evento.webp" alt="Composição floral para uma celebração especial" width="1800" height="1208" loading="lazy" decoding="async"></div><div class="card-body"><h3>Flores para celebrar</h3><p>Composições florais para mesas, eventos, recepções e ocasiões que pedem acabamento especial.</p><a class="text-link" href="#contato">Conversar sobre uma ocasião →</a></div></article>
-          <article class="card"><div class="card-media"><img src="photos/orquideas-premium.webp" alt="Seleção de orquídeas em vasos elegantes" width="1536" height="1024" loading="lazy" decoding="async"></div><div class="card-body"><h3>Setor de orquídeas</h3><p>Uma seleção procurada por quem busca presença, elegância e uma planta que se torna protagonista.</p><a class="text-link" href="#contato">Encontrar a orquídea ideal →</a></div></article>
-          <article class="card"><div class="card-media"><img src="photos/terrario-suculentas.webp" alt="Terrário de suculentas em vidro" width="1152" height="1536" loading="lazy" decoding="async"></div><div class="card-body"><h3>Terrários de suculentas</h3><p>Pequenos jardins em vidro, criados para levar textura, verde e delicadeza aos ambientes.</p><a class="text-link" href="#contato">Falar sobre terrários →</a></div></article>
+          <article class="card motion-in"><div class="card-media"><video class="autoplay-video" muted loop playsinline preload="metadata" poster="photos/evento.webp" aria-label="Flores para celebrar"><source src="photos/hero-bg.mp4" type="video/mp4"></video></div><div class="card-body"><h3>Flores para celebrar</h3><p>Composições florais para mesas, eventos, recepções e ocasiões que pedem acabamento especial.</p><a class="text-link" href="#contato">Conversar sobre uma ocasião →</a></div></article>
+          <article class="card motion-in"><div class="card-media"><img src="photos/orquideas-premium.webp" alt="Seleção de orquídeas em vasos elegantes" width="1536" height="1024" loading="lazy" decoding="async"></div><div class="card-body"><h3>Setor de orquídeas</h3><p>Uma seleção procurada por quem busca presença, elegância e uma planta que se torna protagonista.</p><a class="text-link" href="#contato">Encontrar a orquídea ideal →</a></div></article>
+          <article class="card motion-in"><div class="card-media"><img src="photos/terrario-suculentas.webp" alt="Terrário de suculentas em vidro" width="1152" height="1536" loading="lazy" decoding="async"></div><div class="card-body"><h3>Terrários de suculentas</h3><p>Pequenos jardins em vidro, criados para levar textura, verde e delicadeza aos ambientes.</p><a class="text-link" href="#contato">Falar sobre terrários →</a></div></article>
         </div>
       </div>
     </section>
@@ -336,7 +347,7 @@
     <section class="section portfolio" id="trabalhos">
       <div class="wrap">
         <div class="section-head"><span class="eyebrow">Nossos trabalhos</span><h2>Composições que deixam a beleza falar mais baixo — e durar mais.</h2><p>Flores, orquídeas, plantas e terrários escolhidos para criar presença em cada canto.</p><div class="ornament" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 27V12m0 15C7 24 4 18 6 12c6 1 10 5 10 15Zm0-4c0-8 4-14 10-17 3 8 0 14-10 17Zm0-7c-5-3-7-7-6-12 5 1 8 5 6 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
-        <div class="portfolio-grid"><a class="portfolio-main" href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer" aria-label="Veja mais trabalhos no Instagram"><img src="photos/orquideas-premium.webp" alt="Orquídeas selecionadas para compor um ambiente" width="1536" height="1024" loading="lazy" decoding="async"></a><div class="portfolio-side"><a class="portfolio-small" href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer" aria-label="Veja terrários no Instagram"><img src="photos/terrario-suculentas.webp" alt="Terrário de suculentas para presentear ou decorar" width="1152" height="1536" loading="lazy" decoding="async"></a><a class="portfolio-small" href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer" aria-label="Conheça a loja no Instagram"><img src="photos/atendimento.webp" alt="Atendimento e flores na Florescendo" width="1800" height="1208" loading="lazy" decoding="async"></a></div></div>
+        <div class="portfolio-grid motion-in"><a class="portfolio-main" href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer" aria-label="Veja mais trabalhos no Instagram"><img src="photos/orquideas-premium.webp" alt="Orquídeas selecionadas para compor um ambiente" width="1536" height="1024" loading="lazy" decoding="async"></a><div class="portfolio-side"><a class="portfolio-small" href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer" aria-label="Veja terrários no Instagram"><img src="photos/terrario-suculentas.webp" alt="Terrário de suculentas para presentear ou decorar" width="1152" height="1536" loading="lazy" decoding="async"></a><a class="portfolio-small" href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer" aria-label="Conheça bastidores da loja no Instagram"><video class="autoplay-video" muted loop playsinline preload="metadata" poster="photos/atendimento.webp" aria-label="Bastidores da loja Florescendo"><source src="photos/team-2.mp4" type="video/mp4"></video></a></div></div>
         <p class="portfolio-caption">Veja outras inspirações e novidades no Instagram da Florescendo.</p>
       </div>
     </section>
@@ -402,6 +413,7 @@
     });
     document.getElementById('year').textContent = new Date().getFullYear();
     const autoplayVideos = [...document.querySelectorAll('.autoplay-video')];
+    const animatedElements = [...document.querySelectorAll('.motion-in')];
     if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       const videoObserver = new IntersectionObserver(entries => entries.forEach(entry => {
         const video = entry.target;
@@ -409,8 +421,16 @@
         else video.pause();
       }), { threshold: 0.2 });
       autoplayVideos.forEach(video => videoObserver.observe(video));
+      const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      }), { threshold: 0.15 });
+      animatedElements.forEach(element => revealObserver.observe(element));
     } else {
       autoplayVideos.forEach(video => { video.pause(); video.removeAttribute('autoplay'); });
+      animatedElements.forEach(element => element.classList.add('is-visible'));
     }
   </script>
 </body>
