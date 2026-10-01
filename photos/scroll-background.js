@@ -10,6 +10,13 @@
   let ready = false;
   let progress = 0;
   let drawQueued = false;
+  const fps = 24;
+  let targetTime = 0;
+
+  function seekLatestFrame() {
+    if (!ready || video.seeking || reducedMotion.matches) return;
+    if (Math.abs(video.currentTime - targetTime) >= .5 / fps) video.currentTime = targetTime;
+  }
 
   video.src = 'photos/paisagistas-scroll.mp4';
   video.muted = true;
@@ -17,7 +24,7 @@
   video.preload = 'auto';
 
   function draw() {
-    if (!ready || !canvas.width || !canvas.height) return;
+    if (!ready || video.readyState < 2 || !canvas.width || !canvas.height) return;
     const scale = Math.max(canvas.width / video.videoWidth, canvas.height / video.videoHeight);
     const width = video.videoWidth * scale;
     const height = video.videoHeight * scale;
@@ -43,15 +50,19 @@
   function syncToScroll() {
     const rect = panel.getBoundingClientRect();
     const viewport = window.innerHeight || 1;
-    // The sequence completes while this panel is still comfortably inside the viewport.
-    const revealDistance = Math.min(rect.height * .7, viewport * .48);
-    progress = Math.max(0, Math.min(1, (viewport * .82 - rect.top) / revealDistance));
-    panel.style.setProperty('--inset', `${((1 - progress) * 50).toFixed(2)}%`);
-    panel.style.setProperty('--video-opacity', progress.toFixed(3));
+    const nextSection = panel.closest('section').nextElementSibling;
+    const nextRect = nextSection.getBoundingClientRect();
+    // Start on entry; finish when the next section's midpoint reaches screen center.
+    const start = window.scrollY + rect.top - viewport * .82;
+    const end = window.scrollY + nextRect.top + nextRect.height / 2 - viewport / 2;
+    progress = Math.max(0, Math.min(1, (window.scrollY - start) / Math.max(1, end - start)));
+    const reveal = reducedMotion.matches ? 1 : Math.min(1, progress / .18);
+    panel.style.setProperty('--inset', `${((1 - reveal) * 50).toFixed(2)}%`);
+    panel.style.setProperty('--video-opacity', reveal.toFixed(3));
     if (ready && Number.isFinite(video.duration) && !reducedMotion.matches) {
-      const target = Math.min(video.duration - .04, progress * video.duration);
-      if (Math.abs(video.currentTime - target) > .035 && !video.seeking) video.currentTime = target;
-      queueDraw();
+      const lastFrame = Math.max(0, Math.ceil(video.duration * fps) - 1);
+      targetTime = Math.round(progress * lastFrame) / fps;
+      seekLatestFrame();
     }
   }
 
@@ -60,18 +71,12 @@
     resize();
     syncToScroll();
   });
-  video.addEventListener('seeked', queueDraw);
+  video.addEventListener('seeked', () => { queueDraw(); seekLatestFrame(); });
   video.addEventListener('loadeddata', queueDraw);
   window.addEventListener('resize', () => { resize(); syncToScroll(); }, { passive: true });
   window.addEventListener('scroll', syncToScroll, { passive: true });
   reducedMotion.addEventListener?.('change', syncToScroll);
 
-  if (reducedMotion.matches) {
-    panel.style.setProperty('--inset', '0%');
-    panel.style.setProperty('--video-opacity', '1');
-    panel.classList.add('motion-reduced');
-    return;
-  }
   resize();
   syncToScroll();
   video.load();
