@@ -11,10 +11,10 @@
   let progress = 0;
   let drawQueued = false;
 
-  video.src = 'photos/florescendo-desktop.mp4';
+  video.src = 'photos/paisagistas-scroll.mp4';
   video.muted = true;
   video.playsInline = true;
-  video.preload = 'metadata';
+  video.preload = 'auto';
 
   function draw() {
     if (!ready || !canvas.width || !canvas.height) return;
@@ -47,7 +47,7 @@
     const revealDistance = Math.min(rect.height * .7, viewport * .48);
     progress = Math.max(0, Math.min(1, (viewport * .82 - rect.top) / revealDistance));
     panel.style.setProperty('--inset', `${((1 - progress) * 50).toFixed(2)}%`);
-    panel.style.setProperty('--video-opacity', (0.35 + progress * 0.65).toFixed(3));
+    panel.style.setProperty('--video-opacity', progress.toFixed(3));
     if (ready && Number.isFinite(video.duration) && !reducedMotion.matches) {
       const target = Math.min(video.duration - .04, progress * video.duration);
       if (Math.abs(video.currentTime - target) > .035 && !video.seeking) video.currentTime = target;
