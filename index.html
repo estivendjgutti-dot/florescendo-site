@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fbe9e4">
-  <title>Florescendo | Floricultura no Mercado das Flores – Vila Leopoldina, SP</title>
-  <meta name="description" content="Flores, plantas, buquês e decoração floral para eventos na Vila Leopoldina, em São Paulo. Conheça a Florescendo no Mercado das Flores e peça seu orçamento.">
+  <title>Florescendo | Flores, Orquídeas e Terrários no Mercadão das Flores</title>
+  <meta name="description" content="Flores, orquídeas e terrários de suculentas no Mercadão das Flores, Vila Leopoldina. Uma curadoria delicada para presentes, ambientes e projetos especiais.">
   <link rel="canonical" href="https://florescendoflores.com.br/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Florescendo Flores e Plantas">
   <meta property="og:title" content="Florescendo | Flores e Plantas">
-  <meta property="og:description" content="Buquês, presentes e projetos florais no Mercado das Flores, Vila Leopoldina, SP.">
+  <meta property="og:description" content="Flores, orquídeas e terrários de suculentas no Mercadão das Flores, Vila Leopoldina, SP.">
   <meta property="og:url" content="https://florescendoflores.com.br/">
   <meta property="og:image" content="https://florescendoflores.com.br/photos/logo-florescendo.webp">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -29,7 +29,7 @@
     "telephone": "+55 11 96034-1653",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Rua Hayden, 105, Mercado das Flores",
+      "streetAddress": "Rua Hayden, 105, Mercadão das Flores",
       "addressLocality": "São Paulo",
       "addressRegion": "SP",
       "addressCountry": "BR"
@@ -43,7 +43,8 @@
       --vinho: #a3124f;
       --rosa: #e0457b;
       --dourado: #c9974a;
-      --rose: #fbe9e4;
+      --rose: #f9deda;
+      --blush: #fdf0ed;
       --texto: #3a2a2a;
       --vinho-dark: #3d0a1f;
       --oliva: #5b6b3a;
@@ -72,8 +73,11 @@
     .btn-outline:hover { color: white; background: var(--vinho); }
     .site-header { position: sticky; z-index: 10; top: 0; border-bottom: 1px solid #c9974a45; background: #fbe9e4f2; backdrop-filter: blur(14px); }
     .nav { display: flex; min-height: 82px; align-items: center; justify-content: space-between; gap: 26px; }
-    .brand { display: inline-flex; flex: 0 0 auto; align-items: center; }
-    .brand img { width: 230px; height: auto; }
+    .brand { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 10px; }
+    .brand-icon { width: 50px; height: 50px; border-radius: 50%; box-shadow: 0 3px 10px #3d0a1f12; }
+    .brand-copy { display: grid; line-height: 1; }
+    .brand-name { color: var(--vinho-dark); font-family: 'Playfair Display', Georgia, serif; font-size: 26px; font-weight: 600; letter-spacing: -.04em; }
+    .brand-sub { margin-top: 5px; color: var(--oliva); font-size: 8px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; }
     .nav-links { display: flex; align-items: center; gap: 22px; font-size: 13px; font-weight: 600; }
     .nav-links a:hover, .footer-links a:hover { color: var(--rosa); }
     .nav-cta { flex: 0 0 auto; }
@@ -87,13 +91,11 @@
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
     .hero-note { margin: 21px 0 0; color: #725e5c; font-size: 13px; }
     .hero-note::before { content: '✦'; margin-right: 8px; color: var(--dourado); }
-    .hero-art { position: relative; width: min(100%, 490px); justify-self: end; }
-    .video-arch { position: relative; overflow: hidden; aspect-ratio: .83; border: 5px solid #fff8f2; border-radius: 48% 48% 24px 24px; background: #e8c5b8; box-shadow: 0 26px 70px #55162b26, 0 0 0 1px #c9974a8c; }
-    .video-arch video { width: 100%; height: 100%; object-fit: cover; }
-    .hero-logo { position: absolute; right: -36px; bottom: 18px; width: 148px; overflow: hidden; border: 4px solid #fffaf7; border-radius: 50%; box-shadow: 0 12px 36px #3d0a1f30; }
-    .hero-logo img { width: 100%; height: 100%; }
+    .hero-art { position: relative; width: min(100%, 470px); justify-self: end; }
+    .hero-mark { position: relative; overflow: hidden; padding: 12px; border: 1px solid #c9974a90; border-radius: 50% 50% 28% 28%; background: #f9deda; box-shadow: 0 26px 70px #55162b21; }
+    .hero-mark img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; }
+    .hero-note { max-width: 450px; }
     .hero-flower { position: absolute; z-index: 1; top: -37px; right: -67px; width: 185px; opacity: .16; pointer-events: none; }
-    .video-arch { z-index: 2; }
 
     .section { position: relative; z-index: 1; padding: 92px 0; }
     .section-head { max-width: 720px; margin: 0 auto 42px; text-align: center; }
@@ -103,7 +105,7 @@
     .ornament::before, .ornament::after { width: 58px; height: 1px; background: var(--dourado); content: ''; }
     .ornament svg { width: 25px; height: 25px; }
 
-    .proof-strip { padding: 25px 0; border-top: 1px solid #c9974a55; border-bottom: 1px solid #c9974a55; background: #fffaf7; }
+    .proof-strip { padding: 25px 0; border-top: 1px solid #c9974a55; border-bottom: 1px solid #c9974a55; background: var(--blush); }
     .proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .proof-item { display: flex; align-items: center; justify-content: center; gap: 13px; text-align: left; }
     .proof-icon { display: grid; width: 42px; height: 42px; flex: 0 0 42px; place-items: center; border: 1px solid #c9974a88; border-radius: 50%; color: var(--vinho); font-size: 19px; }
@@ -113,12 +115,13 @@
     .story-section { padding-top: 105px; }
     .story { display: grid; grid-template-columns: .94fr 1.06fr; align-items: center; gap: 70px; }
     .story-media { position: relative; overflow: hidden; min-height: 510px; border: 5px solid #fff; border-radius: 220px 220px 24px 24px; background: var(--rose); box-shadow: 0 18px 55px #3d0a1f17; }
-    .story-media video { position: absolute; width: 100%; height: 100%; object-fit: cover; }
+    .story-media img { position: absolute; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .story-label { position: absolute; right: 18px; bottom: 18px; padding: 9px 14px; border-left: 2px solid var(--dourado); color: white; background: #3d0a1feb; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
     .story-copy h2 { max-width: 560px; }
     .story-copy p { margin-bottom: 16px; }
     .signature { margin-top: 22px; color: var(--vinho); font-family: 'Playfair Display', Georgia, serif; font-size: 23px; font-style: italic; }
 
-    .services { background: #fff5f0d9; }
+    .services { border-top: 1px solid #5b6b3a45; background: var(--blush); }
     .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
     .card { overflow: hidden; border: 1px solid #d9bcae; border-radius: 18px; background: #fffdfa; box-shadow: 0 12px 35px #3d0a1f0b; transition: transform .25s, box-shadow .25s; }
     .card:hover { transform: translateY(-5px); box-shadow: 0 20px 42px #3d0a1f17; }
@@ -141,16 +144,21 @@
     .portfolio-grid a:hover img { transform: scale(1.035); }
     .portfolio-caption { margin: 16px 0 0; color: var(--muted); text-align: center; font-size: 14px; }
 
-    .care { color: #fff8f3; background: var(--vinho-dark); }
-    .care .section-head h2 { color: #fff8f3; }
-    .care .section-head p { color: #e8cdd3; }
-    .care .eyebrow { color: #e8bd79; }
+    .care { color: var(--texto); border-top: 1px solid #5b6b3a77; background: #f7d8d5; }
+    .care .section-head h2 { color: var(--vinho-dark); }
+    .care .section-head p { color: var(--muted); }
+    .care .eyebrow { color: var(--oliva); }
     .care-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .care-card { padding: 27px; border: 1px solid #ffffff35; border-radius: 16px; background: #ffffff0a; }
-    .care-card span { color: #e8bd79; font-size: 13px; font-weight: 700; letter-spacing: .14em; }
-    .care-card h3 { margin: 12px 0 8px; color: white; font-size: 23px; font-weight: 500; }
-    .care-card p { margin: 0; color: #e8cdd3; }
+    .care-card { padding: 27px; border: 1px solid #c9974a99; border-radius: 16px; background: #fff8f5b8; }
+    .care-card span { color: var(--oliva); font-size: 13px; font-weight: 700; letter-spacing: .14em; }
+    .care-card h3 { margin: 12px 0 8px; color: var(--vinho-dark); font-size: 23px; font-weight: 500; }
+    .care-card p { margin: 0; color: var(--muted); }
     .care .btn { margin-top: 28px; }
+    .scroll-reveal { --inset: 50%; --video-opacity: .35; position: relative; height: clamp(250px, 42vw, 410px); margin: 38px 0 42px; overflow: hidden; border-top: 1px solid var(--dourado); border-bottom: 1px solid var(--dourado); background: var(--vinho-dark); }
+    .scroll-reveal::before, .scroll-reveal::after { position: absolute; z-index: 2; top: 0; bottom: 0; width: 1px; content: ''; background: #5b6b3a; opacity: .72; }
+    .scroll-reveal::before { left: calc(50% - 7px); } .scroll-reveal::after { right: calc(50% - 7px); }
+    .scroll-reveal canvas { display: block; width: 100%; height: 100%; clip-path: inset(0 var(--inset) 0 var(--inset)); opacity: var(--video-opacity); transition: clip-path .08s linear, opacity .08s linear; }
+    .scroll-reveal-copy { position: absolute; z-index: 3; inset: auto 0 20px; padding: 0 22px; color: white; font-size: 12px; font-weight: 600; letter-spacing: .15em; text-align: center; text-transform: uppercase; text-shadow: 0 1px 8px #000; pointer-events: none; }
 
     .social { background: #fffaf7e8; }
     .social-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -189,12 +197,10 @@
     .copyright { padding-top: 17px; border-top: 1px solid #ffffff26; color: #d2b7bd; font-size: 12px; }
     .float-wa { position: fixed; z-index: 12; right: 20px; bottom: 20px; display: inline-flex; align-items: center; gap: 9px; padding: 13px 18px; border: 1px solid #ffffffb8; border-radius: 999px; color: white; background: #536b3e; box-shadow: 0 9px 28px #16050c35; font-size: 14px; font-weight: 700; }
     .float-wa:hover { background: var(--oliva); }
-    .scroll-canvas { position: fixed; z-index: 0; inset: 0; width: 100vw; height: 100vh; pointer-events: none; opacity: .11; }
     .skip-link { position: absolute; z-index: 30; top: -60px; left: 12px; padding: 10px 14px; color: white; background: var(--vinho-dark); }
     .skip-link:focus { top: 12px; }
     @media (max-width: 1000px) {
       .nav { gap: 15px; }
-      .brand img { width: 190px; }
       .nav-links { gap: 13px; font-size: 12px; }
       .nav-cta { padding: 11px 15px; font-size: 13px; }
       .hero-grid { gap: 28px; }
@@ -204,7 +210,6 @@
       html { scroll-padding-top: 76px; }
       .wrap { width: min(var(--max), calc(100% - 34px)); }
       .nav { position: relative; min-height: 72px; }
-      .brand img { width: 188px; }
       .menu-toggle { display: inline-grid; place-items: center; }
       .nav-links { position: absolute; top: calc(100% + 1px); right: 0; left: 0; display: none; align-items: stretch; padding: 14px 18px 18px; border: 1px solid var(--line); border-top: 0; border-radius: 0 0 15px 15px; background: #fffaf7; box-shadow: 0 18px 24px #3d0a1f12; font-size: 15px; }
       .nav-links.open { display: flex; flex-direction: column; gap: 2px; }
@@ -227,7 +232,8 @@
     }
     @media (max-width: 600px) {
       .wrap { width: calc(100% - 30px); }
-      .brand img { width: 140px; }
+      .brand-icon { width: 43px; height: 43px; }
+      .brand-name { font-size: 23px; }
       .nav { gap: 9px; }
       .nav-cta { min-height: 42px; padding: 9px 12px; font-size: 12px; }
       .menu-toggle { width: 40px; height: 40px; }
@@ -237,7 +243,6 @@
       .hero-copy > p { max-width: 450px; font-size: 17px; }
       .hero-art { width: min(82%, 360px); justify-self: center; }
       .hero-logo { right: -27px; bottom: 13px; width: 104px; }
-      .video-arch { aspect-ratio: .95; }
       .section { padding: 62px 0; }
       .section-head { margin-bottom: 30px; }
       .section-head h2, .story-copy h2, .contact-copy h2, .location-copy h2 { font-size: 36px; }
@@ -264,7 +269,7 @@
       .footer-intro { grid-column: 1 / -1; }
       .float-wa { width: 52px; height: 52px; justify-content: center; padding: 0; font-size: 0; }
       .float-wa svg { width: 23px; height: 23px; }
-      .scroll-canvas { display: none; }
+      .scroll-reveal { height: 260px; margin: 30px 0; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
@@ -273,10 +278,9 @@
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-  <canvas class="scroll-canvas" id="scroll-canvas" aria-hidden="true"></canvas>
   <header class="site-header">
     <div class="wrap nav">
-      <a class="brand" href="#inicio" aria-label="Florescendo Flores e Plantas — início"><img src="photos/logo-horizontal.webp" alt="Florescendo — Flores e Plantas" width="952" height="221"></a>
+      <a class="brand" href="#inicio" aria-label="Florescendo Flores e Plantas — início"><img class="brand-icon" src="photos/logo-icon.png" alt="" width="591" height="563"><span class="brand-copy"><span class="brand-name">Florescendo</span><span class="brand-sub">Flores e plantas</span></span></a>
       <nav class="nav-links" id="nav-links" aria-label="Navegação principal">
         <a href="#historia">Nossa história</a><a href="#servicos">Serviços</a><a href="#trabalhos">Trabalhos</a><a href="#paisagistas">Paisagistas</a><a href="#contato">Contato</a>
       </nav>
@@ -289,32 +293,31 @@
     <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow">Florescendo · Mercado das Flores</span>
-          <h1 id="hero-title">Flores e plantas para momentos memoráveis.</h1>
-          <p>Buquês, presentes, decoração floral e cuidado com plantas. Conte sua ideia para a nossa equipe e vamos encontrar a composição certa.</p>
+          <span class="eyebrow">Florescendo · Mercadão das Flores</span>
+          <h1 id="hero-title">Delicadeza que floresce em cada ambiente.</h1>
+          <p>Uma curadoria floral feminina e sofisticada para presentear, decorar e transformar espaços com leveza, presença e intenção.</p>
           <div class="hero-actions"><a class="btn btn-primary" href="#contato">Solicitar orçamento <span aria-hidden="true">↗</span></a><a class="btn btn-outline" href="#trabalhos">Conhecer nossos trabalhos</a></div>
-          <p class="hero-note">Atendimento no Mercado das Flores, na Vila Leopoldina, e pelo WhatsApp.</p>
+          <p class="hero-note">Dois boxes no Mercadão das Flores, na Vila Leopoldina, e atendimento próximo pelo WhatsApp.</p>
         </div>
         <div class="hero-art">
           <svg class="hero-flower" viewBox="0 0 180 180" fill="none" aria-hidden="true"><path d="M91 165c-4-47 4-84 30-117M89 163C72 125 51 101 20 89m72 38c15-26 37-41 68-45M86 165c-9-36-9-68 4-99" stroke="#a3124f" stroke-width="3"/><path d="M121 49c-4-22 10-35 27-39 6 18 0 35-19 44m-87 39C19 78 17 62 28 47c18 8 25 23 20 42m89 4c7-18 22-25 40-21-1 20-13 33-33 32M86 67C72 50 76 33 89 19c15 13 18 30 7 49" fill="#e0457b" fill-opacity=".28" stroke="#a3124f" stroke-width="2"/></svg>
-          <div class="video-arch"><video class="autoplay-video" muted loop playsinline preload="metadata" poster="photos/hero-bg.webp" aria-label="Flores e arranjos da Florescendo"><source src="photos/hero-bg.mp4" type="video/mp4"></video></div>
-          <div class="hero-logo"><img src="photos/logo-florescendo.webp" alt="Logo circular Florescendo Flores e Plantas" width="1254" height="1254"></div>
+          <div class="hero-mark"><img src="photos/logo-icon.png" alt="Florescendo Flores e Plantas" width="591" height="563"></div>
         </div>
       </div>
     </section>
 
     <section class="proof-strip" aria-label="Informações da Florescendo">
       <div class="wrap proof-grid">
-        <div class="proof-item"><span class="proof-icon" aria-hidden="true">⌖</span><div><strong>Loja física</strong><span>Mercado das Flores · Vila Leopoldina</span></div></div>
-        <div class="proof-item"><span class="proof-icon" aria-hidden="true">✿</span><div><strong>Flores e plantas</strong><span>Buquês, presentes e projetos florais</span></div></div>
-        <div class="proof-item"><span class="proof-icon" aria-hidden="true">♡</span><div><strong>Conversa direta</strong><span>Atendimento da equipe pelo WhatsApp</span></div></div>
+        <div class="proof-item"><span class="proof-icon" aria-hidden="true">⌖</span><div><strong>Dois boxes</strong><span>Mercadão das Flores · Vila Leopoldina</span></div></div>
+        <div class="proof-item"><span class="proof-icon" aria-hidden="true">✿</span><div><strong>Especialidade em orquídeas</strong><span>Uma seleção muito procurada na loja</span></div></div>
+        <div class="proof-item"><span class="proof-icon" aria-hidden="true">♡</span><div><strong>Curadoria com afeto</strong><span>Atendimento direto da nossa equipe</span></div></div>
       </div>
     </section>
 
     <section class="section story-section" id="historia">
       <div class="wrap story">
-        <div class="story-media"><video class="autoplay-video" muted loop playsinline preload="none" poster="photos/loja.webp" aria-label="Um olhar sobre a Florescendo"><source src="photos/team-1.mp4" type="video/mp4"></video></div>
-        <div class="story-copy"><span class="eyebrow">Nossa história</span><h2>Flores escolhidas com cuidado, perto de quem vai recebê-las.</h2><p>No Mercado das Flores, na Vila Leopoldina, a Florescendo reúne flores, plantas, buquês e presentes para diferentes momentos.</p><p>O atendimento começa pela conversa: a ocasião, o estilo e o que você imaginou ajudam a equipe a indicar caminhos e preparar uma proposta sob medida.</p><div class="signature">Florescendo, com carinho em cada detalhe.</div></div>
+        <div class="story-media"><img src="photos/idealizadora-florescendo.webp" alt="Idealizadora da Florescendo entre plantas e orquídeas" width="468" height="623" loading="lazy" decoding="async"><span class="story-label">A idealizadora da Florescendo</span></div>
+        <div class="story-copy"><span class="eyebrow">Nossa história</span><h2>Um olhar feminino para transformar o verde em presença.</h2><p>A Florescendo nasceu do desejo de tornar flores e plantas parte dos gestos mais bonitos da vida: um presente escolhido com cuidado, uma orquídea que marca um espaço, um terrário que traz respiro para a rotina.</p><p>Em dois boxes no Mercadão das Flores, a curadoria combina sensibilidade, acabamento e escuta. Cada escolha é pensada para revelar beleza sem excessos e criar uma experiência naturalmente premium.</p><div class="signature">Delicada por natureza. Especial em cada detalhe.</div></div>
       </div>
       <div class="ornament" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 27V12m0 15C7 24 4 18 6 12c6 1 10 5 10 15Zm0-4c0-8 4-14 10-17 3 8 0 14-10 17Zm0-7c-5-3-7-7-6-12 5 1 8 5 6 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
     </section>
@@ -323,46 +326,47 @@
       <div class="wrap">
         <div class="section-head"><span class="eyebrow">Como podemos ajudar</span><h2>Um detalhe florido muda o jeito de viver um momento.</h2><p>Escolha o que procura. A equipe ajuda com disponibilidade, ideias e próximos passos.</p><div class="ornament" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 27V12m0 15C7 24 4 18 6 12c6 1 10 5 10 15Zm0-4c0-8 4-14 10-17 3 8 0 14-10 17Zm0-7c-5-3-7-7-6-12 5 1 8 5 6 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
         <div class="cards">
-          <article class="card"><div class="card-media"><img src="photos/evento.webp" alt="Composição floral para celebração" width="1800" height="1208" loading="lazy" decoding="async"></div><div class="card-body"><h3>Eventos e celebrações</h3><p>Flores e composições para casamentos, aniversários, encontros e ocasiões especiais.</p><a class="text-link" href="#contato">Conversar sobre um evento →</a></div></article>
-          <article class="card"><div class="card-media"><img src="photos/buque.webp" alt="Buquê de flores preparado para presentear" width="1800" height="1800" loading="lazy" decoding="async"></div><div class="card-body"><h3>Buquês e presentes</h3><p>Flores, plantas e presentes para surpreender, agradecer ou deixar o dia mais bonito.</p><a class="text-link" href="https://wa.me/5511960341653?text=Ol%C3%A1%21%20Quero%20saber%20sobre%20buqu%C3%AAs%20e%20presentes." target="_blank" rel="noopener noreferrer">Perguntar pelo WhatsApp →</a></div></article>
-          <article class="card"><div class="card-media"><img src="photos/orquidea.webp" alt="Orquídea para decorar um ambiente" width="1800" height="1800" loading="lazy" decoding="async"></div><div class="card-body"><h3>Plantas e ambientes</h3><p>Espécies e composições para trazer mais verde à casa, ao escritório e a outros espaços.</p><a class="text-link" href="#contato">Falar sobre plantas →</a></div></article>
+          <article class="card"><div class="card-media"><img src="photos/evento.webp" alt="Composição floral para uma celebração especial" width="1800" height="1208" loading="lazy" decoding="async"></div><div class="card-body"><h3>Flores para celebrar</h3><p>Composições florais para mesas, eventos, recepções e ocasiões que pedem acabamento especial.</p><a class="text-link" href="#contato">Conversar sobre uma ocasião →</a></div></article>
+          <article class="card"><div class="card-media"><img src="photos/orquideas-premium.webp" alt="Seleção de orquídeas em vasos elegantes" width="1536" height="1024" loading="lazy" decoding="async"></div><div class="card-body"><h3>Setor de orquídeas</h3><p>Uma seleção procurada por quem busca presença, elegância e uma planta que se torna protagonista.</p><a class="text-link" href="#contato">Encontrar a orquídea ideal →</a></div></article>
+          <article class="card"><div class="card-media"><img src="photos/terrario-suculentas.webp" alt="Terrário de suculentas em vidro" width="1152" height="1536" loading="lazy" decoding="async"></div><div class="card-body"><h3>Terrários de suculentas</h3><p>Pequenos jardins em vidro, criados para levar textura, verde e delicadeza aos ambientes.</p><a class="text-link" href="#contato">Falar sobre terrários →</a></div></article>
         </div>
       </div>
     </section>
 
     <section class="section portfolio" id="trabalhos">
       <div class="wrap">
-        <div class="section-head"><span class="eyebrow">Nossos trabalhos</span><h2>Flores, cores e ideias para inspirar o seu próximo momento.</h2><p>Uma seleção de arranjos, buquês e cenas da Florescendo. Cada criação pode ganhar um caminho próprio.</p><div class="ornament" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 27V12m0 15C7 24 4 18 6 12c6 1 10 5 10 15Zm0-4c0-8 4-14 10-17 3 8 0 14-10 17Zm0-7c-5-3-7-7-6-12 5 1 8 5 6 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
-        <div class="portfolio-grid"><a class="portfolio-main" href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer" aria-label="Veja mais trabalhos no Instagram"><img src="photos/evento.webp" alt="Arranjo floral criado para uma celebração" width="1800" height="1208" loading="lazy" decoding="async"></a><div class="portfolio-side"><a class="portfolio-small" href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer" aria-label="Veja mais buquês no Instagram"><img src="photos/buque.webp" alt="Buquê de flores em tons delicados" width="1800" height="1800" loading="lazy" decoding="async"></a><a class="portfolio-small" href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer" aria-label="Conheça a loja no Instagram"><img src="photos/atendimento.webp" alt="Atendimento e flores na Florescendo" width="1800" height="1208" loading="lazy" decoding="async"></a></div></div>
+        <div class="section-head"><span class="eyebrow">Nossos trabalhos</span><h2>Composições que deixam a beleza falar mais baixo — e durar mais.</h2><p>Flores, orquídeas, plantas e terrários escolhidos para criar presença em cada canto.</p><div class="ornament" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 27V12m0 15C7 24 4 18 6 12c6 1 10 5 10 15Zm0-4c0-8 4-14 10-17 3 8 0 14-10 17Zm0-7c-5-3-7-7-6-12 5 1 8 5 6 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+        <div class="portfolio-grid"><a class="portfolio-main" href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer" aria-label="Veja mais trabalhos no Instagram"><img src="photos/orquideas-premium.webp" alt="Orquídeas selecionadas para compor um ambiente" width="1536" height="1024" loading="lazy" decoding="async"></a><div class="portfolio-side"><a class="portfolio-small" href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer" aria-label="Veja terrários no Instagram"><img src="photos/terrario-suculentas.webp" alt="Terrário de suculentas para presentear ou decorar" width="1152" height="1536" loading="lazy" decoding="async"></a><a class="portfolio-small" href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer" aria-label="Conheça a loja no Instagram"><img src="photos/atendimento.webp" alt="Atendimento e flores na Florescendo" width="1800" height="1208" loading="lazy" decoding="async"></a></div></div>
         <p class="portfolio-caption">Veja outras inspirações e novidades no Instagram da Florescendo.</p>
       </div>
     </section>
 
     <section class="section care" id="paisagistas">
       <div class="wrap">
-        <div class="section-head"><span class="eyebrow">Para paisagistas e profissionais</span><h2>Vamos cuidar dos detalhes do seu próximo projeto.</h2><p>Conte o contexto, a região e o que precisa. A equipe conversa com você sobre flores, plantas e possibilidades.</p></div>
+        <div class="section-head"><span class="eyebrow">Para paisagistas e profissionais</span><h2>Seu projeto pede verde com assinatura.</h2><p>Para ambientes que precisam transmitir cuidado e sofisticação, a Florescendo encontra espécies e composições com leitura estética, qualidade e sensibilidade.</p></div>
+        <div class="scroll-reveal" id="scroll-reveal" aria-label="Vídeo de flores e plantas que se abre conforme a rolagem"><canvas id="scroll-canvas" aria-hidden="true"></canvas><div class="scroll-reveal-copy">Acompanhe o movimento · descubra a curadoria Florescendo</div></div>
         <div class="care-grid"><article class="care-card"><span>01 · CONTE</span><h3>Seu projeto</h3><p>Compartilhe o espaço, a ocasião ou as espécies que está procurando.</p></article><article class="care-card"><span>02 · ALINHE</span><h3>Suas necessidades</h3><p>Converse sobre região, quantidades e o tipo de suporte que faz sentido.</p></article><article class="care-card"><span>03 · COMBINE</span><h3>Os próximos passos</h3><p>A equipe responde pelo WhatsApp para entender a demanda e orientar o atendimento.</p></article></div>
         <a class="btn btn-light" href="#contato">Falar sobre uma parceria</a>
       </div>
     </section>
 
     <section class="section social" id="instagram">
-      <div class="wrap"><div class="section-head"><span class="eyebrow">Acompanhe a Florescendo</span><h2>Mais flores no seu dia a dia.</h2><p>Veja novidades, arranjos e inspirações no Instagram.</p></div><div class="social-grid"><a class="social-tile" href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer" aria-label="Florescendo no Instagram: buquê"><img src="photos/buque.webp" alt="Buquê de flores coloridas" loading="lazy" decoding="async"></a><a class="social-tile" href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer" aria-label="Florescendo no Instagram: loja"><img src="photos/loja.webp" alt="Flores e plantas disponíveis na loja" loading="lazy" decoding="async"></a><a class="social-tile" href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer" aria-label="Florescendo no Instagram: arranjo"><img src="photos/evento.webp" alt="Arranjo floral para evento" loading="lazy" decoding="async"></a></div><div class="social-action"><a class="btn btn-outline" href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer">Seguir no Instagram ↗</a></div></div>
+      <div class="wrap"><div class="section-head"><span class="eyebrow">Acompanhe a Florescendo</span><h2>Mais verde, mais delicadeza no seu dia a dia.</h2><p>Veja as novidades, as orquídeas e as composições da loja no Instagram.</p></div><div class="social-grid"><a class="social-tile" href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer" aria-label="Florescendo no Instagram: terrário"><img src="photos/terrario-suculentas.webp" alt="Terrário de suculentas em vidro" loading="lazy" decoding="async"></a><a class="social-tile" href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer" aria-label="Florescendo no Instagram: loja"><img src="photos/loja.webp" alt="Flores e plantas disponíveis na loja" loading="lazy" decoding="async"></a><a class="social-tile" href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer" aria-label="Florescendo no Instagram: orquídeas"><img src="photos/orquideas-premium.webp" alt="Orquídeas em vasos elegantes" loading="lazy" decoding="async"></a></div><div class="social-action"><a class="btn btn-outline" href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer">Seguir no Instagram ↗</a></div></div>
     </section>
 
     <section class="section contact" id="contato">
       <div class="wrap contact-grid"><div class="contact-copy"><span class="eyebrow">Vamos conversar</span><h2>Conte o que você está imaginando.</h2><p>Preencha o briefing e uma conversa será aberta no WhatsApp com os detalhes. Para eventos, inclua data, local e quantidade aproximada.</p><a class="btn btn-outline" href="https://wa.me/5511960341653?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Florescendo." target="_blank" rel="noopener noreferrer">Ou chame direto no WhatsApp</a></div>
-        <form class="form" id="quote-form"><div class="fields"><div class="field"><label for="nome">Seu nome</label><input id="nome" name="nome" autocomplete="name" required placeholder="Como podemos chamar você?"></div><div class="field"><label for="whatsapp">Seu WhatsApp</label><input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" required placeholder="(11) 99999-9999"></div><div class="field"><label for="tipo">O que você procura?</label><select id="tipo" name="tipo"><option>Evento ou celebração</option><option>Buquê ou presente</option><option>Flores ou plantas</option><option>Ambiente ou paisagismo</option><option>Parceria profissional</option><option>Outro assunto</option></select></div><div class="field"><label for="data">Data desejada</label><input id="data" name="data" type="date"></div><div class="field full"><label for="local">Local ou região</label><input id="local" name="local" autocomplete="address-level2" placeholder="Cidade, bairro ou espaço do evento"></div><div class="field full"><label for="mensagem">Como podemos ajudar?</label><textarea id="mensagem" name="mensagem" placeholder="Conte um pouco sobre a ocasião, estilo ou quantidade"></textarea></div></div><small>Ao continuar, seus dados serão incluídos na mensagem enviada ao WhatsApp da Florescendo.</small><button class="btn btn-primary" type="submit">Continuar pelo WhatsApp ↗</button></form>
+        <form class="form" id="quote-form"><div class="fields"><div class="field"><label for="nome">Seu nome</label><input id="nome" name="nome" autocomplete="name" required placeholder="Como podemos chamar você?"></div><div class="field"><label for="whatsapp">Seu WhatsApp</label><input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" required placeholder="(11) 99999-9999"></div><div class="field"><label for="tipo">O que você procura?</label><select id="tipo" name="tipo"><option>Flores para uma ocasião</option><option>Orquídeas</option><option>Terrário de suculentas</option><option>Plantas para ambiente</option><option>Projeto de paisagismo</option><option>Outro assunto</option></select></div><div class="field"><label for="data">Data desejada</label><input id="data" name="data" type="date"></div><div class="field full"><label for="local">Local ou região</label><input id="local" name="local" autocomplete="address-level2" placeholder="Cidade, bairro ou espaço do evento"></div><div class="field full"><label for="mensagem">Como podemos ajudar?</label><textarea id="mensagem" name="mensagem" placeholder="Conte um pouco sobre a ocasião, estilo ou quantidade"></textarea></div></div><small>Ao continuar, seus dados serão incluídos na mensagem enviada ao WhatsApp da Florescendo.</small><button class="btn btn-primary" type="submit">Continuar pelo WhatsApp ↗</button></form>
       </div>
     </section>
 
     <section class="section" id="localizacao">
-      <div class="wrap location"><div class="location-media"><img src="photos/loja.webp" alt="Flores e plantas na loja Florescendo, no Mercado das Flores" width="1800" height="1005" loading="lazy" decoding="async"></div><div class="location-copy"><span class="eyebrow">Venha nos visitar</span><h2>Florescendo no Mercado das Flores.</h2><p>Estamos na Vila Leopoldina, em São Paulo. Fale com a equipe para confirmar disponibilidade e horário antes de vir.</p><div class="address-note">Rua Hayden, 105<br>Vila Leopoldina · São Paulo, SP</div><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Florescendo%20Mercado%20das%20Flores%20Rua%20Hayden%20105%20S%C3%A3o%20Paulo" target="_blank" rel="noopener noreferrer">Abrir no Google Maps ↗</a></div></div>
+      <div class="wrap location"><div class="location-media"><img src="photos/loja.webp" alt="Flores e plantas na loja Florescendo, no Mercadão das Flores" width="1800" height="1005" loading="lazy" decoding="async"></div><div class="location-copy"><span class="eyebrow">Venha nos visitar</span><h2>Florescendo no Mercadão das Flores.</h2><p>São dois boxes na Vila Leopoldina para você conhecer de perto flores, orquídeas, plantas e terrários de suculentas.</p><div class="address-note">Rua Hayden, 105<br>Mercadão das Flores · Vila Leopoldina · São Paulo, SP</div><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Florescendo%20Mercad%C3%A3o%20das%20Flores%20Rua%20Hayden%20105%20S%C3%A3o%20Paulo" target="_blank" rel="noopener noreferrer">Abrir no Google Maps ↗</a></div></div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap"><div class="footer-grid"><div class="footer-intro"><img class="footer-logo" src="photos/logo-horizontal.webp" alt="Florescendo — Flores e Plantas" width="952" height="221" loading="lazy"><p>Flores, plantas, presentes e projetos florais com atendimento próximo no Mercado das Flores.</p></div><div><div class="footer-title">Explore</div><nav class="footer-links" aria-label="Navegação do rodapé"><a href="#historia">Nossa história</a><a href="#servicos">Serviços</a><a href="#trabalhos">Nossos trabalhos</a><a href="#paisagistas">Para profissionais</a><a href="#localizacao">Localização</a></nav></div><div><div class="footer-title">Fale com a gente</div><div class="footer-links"><a href="https://wa.me/5511960341653" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer">Instagram</a><span>Mercado das Flores · Vila Leopoldina</span></div></div></div><div class="copyright">© <span id="year">2026</span> Florescendo Flores e Plantas</div></div>
+    <div class="wrap"><div class="footer-grid"><div class="footer-intro"><img class="footer-logo" src="photos/logo-icon.png" alt="Florescendo — Flores e Plantas" width="591" height="563" loading="lazy"><p>Flores, orquídeas, terrários de suculentas e projetos florais com atendimento próximo no Mercadão das Flores.</p></div><div><div class="footer-title">Explore</div><nav class="footer-links" aria-label="Navegação do rodapé"><a href="#historia">Nossa história</a><a href="#servicos">Serviços</a><a href="#trabalhos">Nossos trabalhos</a><a href="#paisagistas">Para profissionais</a><a href="#localizacao">Localização</a></nav></div><div><div class="footer-title">Fale com a gente</div><div class="footer-links"><a href="https://wa.me/5511960341653" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="https://www.instagram.com/florescendo.floreseplantas/" target="_blank" rel="noopener noreferrer">Instagram</a><span>Mercadão das Flores · Vila Leopoldina</span></div></div></div><div class="copyright">© <span id="year">2026</span> Florescendo Flores e Plantas</div></div>
   </footer>
   <a class="float-wa" href="https://wa.me/5511960341653?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Florescendo." target="_blank" rel="noopener noreferrer" aria-label="Falar com a Florescendo pelo WhatsApp"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.5L3 20l.9-4.7a8.5 8.5 0 1 1 16.6-3.6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.4 8.5c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4-.1.6.6 1 1.4 1.7 2.4 2.2.2.1.4.1.6-.1l.8-.9c.2-.2.4-.2.6-.1l1.6.8c.2.1.3.3.3.5 0 .4-.2 1.1-.7 1.5-.5.4-1.1.6-1.8.5-1-.2-2.3-.7-3.7-1.9-1.5-1.3-2.4-2.8-2.6-3.8-.2-.8 0-1.5.4-2.1Z" fill="currentColor"/></svg>WhatsApp</a>
   <script type="module" src="photos/scroll-background.js"></script>

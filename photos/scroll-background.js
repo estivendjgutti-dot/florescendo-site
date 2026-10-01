@@ -1,26 +1,26 @@
 (() => {
+  const panel = document.getElementById('scroll-reveal');
   const canvas = document.getElementById('scroll-canvas');
-  if (!canvas) return;
+  if (!panel || !canvas) return;
 
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const context = canvas.getContext('2d', { alpha: false });
   const video = document.createElement('video');
-  const mobileQuery = window.matchMedia('(max-width: 850px)');
-  const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const desktopSource = 'photos/florescendo-desktop.mp4';
-  let wantedProgress = 0;
+  let ready = false;
+  let progress = 0;
   let drawQueued = false;
-  let seekQueued = false;
-  let activeSource = '';
 
+  video.src = 'photos/florescendo-desktop.mp4';
   video.muted = true;
   video.playsInline = true;
   video.preload = 'metadata';
 
-  function resizeCanvas() {
-    const ratio = Math.min(window.devicePixelRatio || 1, 2);
-    canvas.width = Math.round(window.innerWidth * ratio);
-    canvas.height = Math.round(window.innerHeight * ratio);
-    queueDraw();
+  function draw() {
+    if (!ready || !canvas.width || !canvas.height) return;
+    const scale = Math.max(canvas.width / video.videoWidth, canvas.height / video.videoHeight);
+    const width = video.videoWidth * scale;
+    const height = video.videoHeight * scale;
+    context.drawImage(video, (canvas.width - width) / 2, (canvas.height - height) / 2, width, height);
   }
 
   function queueDraw() {
@@ -28,69 +28,48 @@
     drawQueued = true;
     requestAnimationFrame(() => {
       drawQueued = false;
-      drawFrame();
+      draw();
     });
   }
 
-  function drawFrame() {
-    if (video.readyState < HTMLMediaElement.HAVE_CURRENT_DATA || !canvas.width || !canvas.height) return;
-    const scale = Math.max(canvas.width / video.videoWidth, canvas.height / video.videoHeight);
-    const width = video.videoWidth * scale;
-    const height = video.videoHeight * scale;
-    context.drawImage(video, (canvas.width - width) / 2, (canvas.height - height) / 2, width, height);
+  function resize() {
+    const ratio = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.round(panel.clientWidth * ratio);
+    canvas.height = Math.round(panel.clientHeight * ratio);
+    queueDraw();
   }
 
-  function syncSource() {
-    // The mobile cut is 29 MB. Mobile visitors get the lightweight hero video instead.
-    if (mobileQuery.matches || reducedMotionQuery.matches) {
-      video.pause();
-      video.removeAttribute('src');
-      video.load();
-      activeSource = '';
-      canvas.hidden = true;
-      return;
-    }
-    canvas.hidden = false;
-    const nextSource = desktopSource;
-    if (activeSource === nextSource) return;
-    activeSource = nextSource;
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    video.src = nextSource;
-    video.load();
-    seekQueued = false;
-  }
-
-  function seekToProgress() {
-    if (video.readyState < HTMLMediaElement.HAVE_METADATA || !Number.isFinite(video.duration)) return;
-    const targetTime = Math.min(video.duration - 0.04, Math.max(0, wantedProgress * video.duration));
-    if (Math.abs(video.currentTime - targetTime) < 0.04 || video.seeking) return;
-    video.currentTime = targetTime;
-  }
-
-  function updateFromScroll() {
-    const scrollable = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-    wantedProgress = Math.min(1, Math.max(0, window.scrollY / scrollable));
-    if (seekQueued) return;
-    seekQueued = true;
-    requestAnimationFrame(() => {
-      seekQueued = false;
-      seekToProgress();
+  function syncToScroll() {
+    const rect = panel.getBoundingClientRect();
+    const viewport = window.innerHeight || 1;
+    progress = Math.max(0, Math.min(1, (viewport * .82 - rect.top) / (rect.height + viewport * .3)));
+    panel.style.setProperty('--inset', `${((1 - progress) * 50).toFixed(2)}%`);
+    panel.style.setProperty('--video-opacity', (0.35 + progress * 0.65).toFixed(3));
+    if (ready && Number.isFinite(video.duration) && !reducedMotion.matches) {
+      const target = Math.min(video.duration - .04, progress * video.duration);
+      if (Math.abs(video.currentTime - target) > .035 && !video.seeking) video.currentTime = target;
       queueDraw();
-    });
+    }
   }
 
-  video.addEventListener('loadedmetadata', () => { seekToProgress(); queueDraw(); });
-  video.addEventListener('seeked', () => { queueDraw(); updateFromScroll(); });
+  video.addEventListener('loadedmetadata', () => {
+    ready = true;
+    resize();
+    syncToScroll();
+  });
+  video.addEventListener('seeked', queueDraw);
   video.addEventListener('loadeddata', queueDraw);
-  video.addEventListener('error', () => { context.clearRect(0, 0, canvas.width, canvas.height); });
-  window.addEventListener('resize', () => { resizeCanvas(); syncSource(); updateFromScroll(); }, { passive: true });
-  window.addEventListener('scroll', updateFromScroll, { passive: true });
-  if (mobileQuery.addEventListener) mobileQuery.addEventListener('change', syncSource);
-  else mobileQuery.addListener(syncSource);
-  if (reducedMotionQuery.addEventListener) reducedMotionQuery.addEventListener('change', syncSource);
-  else reducedMotionQuery.addListener(syncSource);
+  window.addEventListener('resize', () => { resize(); syncToScroll(); }, { passive: true });
+  window.addEventListener('scroll', syncToScroll, { passive: true });
+  reducedMotion.addEventListener?.('change', syncToScroll);
 
-  resizeCanvas();
-  syncSource();
-  updateFromScroll();
+  if (reducedMotion.matches) {
+    panel.style.setProperty('--inset', '0%');
+    panel.style.setProperty('--video-opacity', '1');
+    panel.classList.add('motion-reduced');
+    return;
+  }
+  resize();
+  syncToScroll();
+  video.load();
 })();
