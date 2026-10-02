@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#fbe9e4">
   <title>Florescendo | Flores, Orquídeas e Terrários no Mercadão das Flores</title>
   <meta name="description" content="Flores, orquídeas e terrários de suculentas no Mercadão das Flores, Vila Leopoldina. Uma curadoria delicada para presentes, ambientes e projetos especiais.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://florescendoflores.com.br/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
@@ -14,6 +15,12 @@
   <meta property="og:description" content="Flores, orquídeas e terrários de suculentas no Mercadão das Flores, Vila Leopoldina, SP.">
   <meta property="og:url" content="https://florescendoflores.com.br/">
   <meta property="og:image" content="https://florescendoflores.com.br/photos/logo-florescendo.webp">
+  <meta property="og:image:alt" content="Logo Florescendo Flores e Plantas">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Florescendo | Flores e Plantas">
+  <meta name="twitter:description" content="Flores, orquídeas e terrários de suculentas no Mercadão das Flores, Vila Leopoldina, SP.">
+  <meta name="twitter:image" content="https://florescendoflores.com.br/photos/logo-florescendo.webp">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +30,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Florist",
+    "@id": "https://florescendoflores.com.br/#florist",
     "name": "Florescendo Flores e Plantas",
     "url": "https://florescendoflores.com.br/",
     "image": "https://florescendoflores.com.br/photos/logo-florescendo.webp",
@@ -35,7 +43,17 @@
       "addressCountry": "BR"
     },
     "areaServed": { "@type": "City", "name": "São Paulo" },
-    "sameAs": ["https://www.instagram.com/florescendo.floreseplantas/"]
+    "sameAs": ["https://www.instagram.com/florescendo.floreseplantas/"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Flores, plantas e curadoria Florescendo",
+      "itemListElement": [
+        { "@type": "OfferCatalog", "name": "Flores para eventos e ambientes" },
+        { "@type": "OfferCatalog", "name": "Orquídeas" },
+        { "@type": "OfferCatalog", "name": "Terrários de suculentas" },
+        { "@type": "OfferCatalog", "name": "Plantas para ambientes" }
+      ]
+    }
   }
   </script>
   <style>

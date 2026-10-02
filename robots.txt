@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://florescendoflores.com.br/sitemap.xml
