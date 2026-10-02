@@ -25,7 +25,8 @@
 
   function draw() {
     if (!ready || video.readyState < 2 || !canvas.width || !canvas.height) return;
-    const scale = Math.max(canvas.width / video.videoWidth, canvas.height / video.videoHeight);
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    const scale = Math.min(canvas.width / video.videoWidth, canvas.height / video.videoHeight);
     const width = video.videoWidth * scale;
     const height = video.videoHeight * scale;
     context.drawImage(video, (canvas.width - width) / 2, (canvas.height - height) / 2, width, height);
@@ -50,12 +51,11 @@
   function syncToScroll() {
     const rect = panel.getBoundingClientRect();
     const viewport = window.innerHeight || 1;
-    const nextSection = panel.closest('section').nextElementSibling;
-    const nextRect = nextSection.getBoundingClientRect();
-    // Start on entry; finish when the next section's midpoint reaches screen center.
-    const start = window.scrollY + rect.top - viewport * .82;
-    const end = window.scrollY + nextRect.top + nextRect.height / 2 - viewport / 2;
-    progress = Math.max(0, Math.min(1, (window.scrollY - start) / Math.max(1, end - start)));
+    const headerHeight = document.querySelector('header')?.getBoundingClientRect().height || 80;
+    // Complete all 24 fps frames before the panel passes behind the header.
+    const entry = viewport * .85;
+    const finish = headerHeight + 32;
+    progress = Math.max(0, Math.min(1, (entry - rect.top) / Math.max(1, entry - finish)));
     const reveal = reducedMotion.matches ? 1 : Math.min(1, progress / .18);
     panel.style.setProperty('--inset', `${((1 - reveal) * 50).toFixed(2)}%`);
     panel.style.setProperty('--video-opacity', reveal.toFixed(3));
@@ -71,7 +71,7 @@
     resize();
     syncToScroll();
   });
-  video.addEventListener('seeked', () => { queueDraw(); seekLatestFrame(); });
+  video.addEventListener('seeked', () => { draw(); seekLatestFrame(); });
   video.addEventListener('loadeddata', queueDraw);
   window.addEventListener('resize', () => { resize(); syncToScroll(); }, { passive: true });
   window.addEventListener('scroll', syncToScroll, { passive: true });
