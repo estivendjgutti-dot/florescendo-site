@@ -201,8 +201,9 @@
     .footer-title { margin-bottom: 12px; color: #e8bd79; font-size: 12px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
     .footer-links { display: flex; flex-direction: column; gap: 7px; color: #f2e2e3; font-size: 14px; }
     .copyright { padding-top: 17px; border-top: 1px solid #ffffff26; color: #d2b7bd; font-size: 12px; }
-    .float-wa { position: fixed; z-index: 12; right: 20px; bottom: 20px; display: inline-flex; align-items: center; gap: 9px; padding: 13px 18px; border: 1px solid #ffffffb8; border-radius: 999px; color: white; background: #536b3e; box-shadow: 0 9px 28px #16050c35; font-size: 14px; font-weight: 700; }
-    .float-wa:hover { background: var(--oliva); }
+    .float-wa { position: fixed; z-index: 12; right: 20px; bottom: 20px; display: inline-flex; align-items: center; gap: 9px; padding: 13px 18px; border: 1px solid #ffffffb8; border-radius: 999px; color: white; background: #536b3e; box-shadow: 0 9px 28px #16050c35; font-size: 14px; font-weight: 700; animation: whatsapp-pulse 2.4s ease-in-out infinite; }
+    .float-wa:hover { background: var(--oliva); animation-play-state: paused; transform: translateY(-2px); }
+    @keyframes whatsapp-pulse { 0%, 100% { box-shadow: 0 8px 24px #16050c38, 0 0 0 0 #536b3e66; } 55% { box-shadow: 0 10px 30px #16050c45, 0 0 0 11px #536b3e00; } }
     .skip-link { position: absolute; z-index: 30; top: -60px; left: 12px; padding: 10px 14px; color: white; background: var(--vinho-dark); }
     .skip-link:focus { top: 12px; }
     @media (max-width: 1000px) {
@@ -292,6 +293,7 @@
     .hero-grid { display: grid; min-height: 560px; grid-template-columns: 1fr .88fr; align-items: center; gap: 52px; }
     .hero-copy { max-width: 610px; margin: 0; }
     .hero-identity { margin-bottom: 14px; }
+    .hero-identity img { display: none; }
     .hero-art { position: relative; width: min(100%, 470px); justify-self: end; animation: float-mark 6s ease-in-out infinite; }
     .hero-mark { position: relative; overflow: hidden; padding: 12px; border: 1px solid #c9974a90; border-radius: 50% 50% 28% 28%; background: #f9deda; box-shadow: 0 26px 70px #55162b21; }
     .hero-mark img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; }
@@ -301,9 +303,9 @@
     .card-body p { min-height: 0; }
     .scroll-reveal { background: transparent; border: 0; }
     .scroll-reveal canvas { background: transparent; }
-    .work-carousel { overflow: hidden; touch-action: pan-y; }
-    .work-stage { position: relative; height: clamp(260px, 42vw, 480px); }
-    .work-slide { position: absolute; top: 0; left: 20%; width: 60%; height: 100%; margin: 0; opacity: 0; transform: scale(.75); pointer-events: none; transition: transform .4s ease, opacity .4s ease; }
+    .work-carousel { max-width: 980px; margin: 0 auto; overflow: hidden; touch-action: pan-y; }
+    .work-stage { position: relative; height: clamp(230px, 25vw, 320px); }
+    .work-slide { position: absolute; top: 0; left: 24%; width: 52%; height: 100%; margin: 0; opacity: 0; transform: scale(.75); pointer-events: none; transition: transform .4s ease, opacity .4s ease; }
     .work-slide img, .work-slide video { width: 100%; height: 100%; object-fit: cover; border-radius: 18px; }
     .work-slide.is-main { opacity: 1; transform: none; z-index: 3; pointer-events: auto; }
     .work-slide.is-prev { opacity: .5; transform: translateX(-87%) scale(.78); z-index: 1; }
@@ -311,11 +313,18 @@
     .work-controls { display: flex; justify-content: center; align-items: center; gap: 22px; margin-top: 22px; }
     .work-controls button { width: 44px; height: 44px; border: 1px solid var(--dourado); border-radius: 50%; background: var(--paper); color: var(--vinho); cursor: pointer; }
     .work-count { min-width: 48px; text-align: center; color: var(--muted); }
+    @media (min-width: 601px) and (max-width: 1100px) {
+      .work-stage { height: 270px; }
+    }
     @media (max-width: 600px) {
       .hero-grid { grid-template-columns: 1fr; gap: 29px; }
       .hero-art { width: min(34vw, 132px); justify-self: end; margin: -4px 4px 0 0; }
       .hero-mark { padding: 5px; }
       .hero-flourish { top: -8px; right: -16px; width: 52px; }
+      .hero-art { display: none; }
+      .hero-identity { display: flex; align-items: center; gap: 14px; margin-bottom: 15px; }
+      .hero-identity img { display: block; width: 94px; height: 94px; object-fit: contain; flex: 0 0 94px; }
+      .hero-identity .eyebrow { font-size: 10px; letter-spacing: .14em; }
       .hero { padding: 25px 0 34px; }
       .hero h1 { font-size: clamp(34px, 10vw, 43px); }
       .cards { gap: 12px; }
@@ -349,7 +358,7 @@
     <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <div class="hero-identity"><span class="eyebrow">Florescendo · Mercadão das Flores</span></div>
+          <div class="hero-identity"><img src="photos/logo-florescendo.webp" alt="Logo original Florescendo Flores e Plantas" width="1254" height="1254"><span class="eyebrow">Florescendo · Mercadão das Flores</span></div>
           <h1 id="hero-title">Delicadeza que floresce em cada ambiente.</h1>
           <p>Uma curadoria floral feminina e sofisticada para presentear, decorar e transformar espaços com leveza, presença e intenção.</p>
           <div class="hero-actions"><a class="btn btn-primary" href="#contato">Solicitar orçamento <span aria-hidden="true">↗</span></a><a class="btn btn-outline" href="#trabalhos">Conhecer nossos trabalhos</a></div>

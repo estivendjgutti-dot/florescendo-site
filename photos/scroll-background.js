@@ -55,7 +55,9 @@
     // Complete all 24 fps frames before the panel passes behind the header.
     const entry = viewport * .85;
     const finish = headerHeight + 32;
-    progress = Math.max(0, Math.min(1, (entry - rect.top) / Math.max(1, entry - finish)));
+    // Keep the mobile pacing intact; desktop scroll wheels often travel farther per gesture.
+    const desktopPacing = window.innerWidth > 600 ? 1.35 : 1;
+    progress = Math.max(0, Math.min(1, (entry - rect.top) / Math.max(1, (entry - finish) * desktopPacing)));
     const reveal = reducedMotion.matches ? 1 : Math.min(1, progress / .18);
     panel.style.setProperty('--inset', `${((1 - reveal) * 50).toFixed(2)}%`);
     panel.style.setProperty('--video-opacity', reveal.toFixed(3));
