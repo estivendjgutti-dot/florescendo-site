@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://florescendoflores.com.br/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://florescendoflores.com.br/</loc><lastmod>2026-10-04</lastmod><priority>1.0</priority></url>
+  <url><loc>https://florescendoflores.com.br/catalogo/</loc><lastmod>2026-10-04</lastmod><priority>0.9</priority></url>
+  <url><loc>https://florescendoflores.com.br/catalogo/orquideas/</loc><lastmod>2026-10-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://florescendoflores.com.br/catalogo/terrarios/</loc><lastmod>2026-10-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://florescendoflores.com.br/catalogo/plantas/</loc><lastmod>2026-10-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://florescendoflores.com.br/catalogo/flores-para-eventos/</loc><lastmod>2026-10-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://florescendoflores.com.br/parcerias/</loc><lastmod>2026-10-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://florescendoflores.com.br/blog/</loc><lastmod>2026-10-04</lastmod><priority>0.9</priority></url>
+  <url><loc>https://florescendoflores.com.br/blog/como-cuidar-de-orquideas-em-casa/</loc><lastmod>2026-10-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://florescendoflores.com.br/blog/terrario-de-suculentas-como-cuidar/</loc><lastmod>2026-10-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://florescendoflores.com.br/blog/plantas-para-ambientes-com-pouca-luz/</loc><lastmod>2026-10-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://florescendoflores.com.br/blog/como-escolher-planta-para-presente/</loc><lastmod>2026-10-04</lastmod><priority>0.7</priority></url>
 </urlset>
