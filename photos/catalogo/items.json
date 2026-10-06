@@ -1,0 +1,239 @@
+[
+  {
+    "id": 3,
+    "name": "Estrelítzia",
+    "group": "Folhagens",
+    "note": "Folhas amplas e porte tropical.",
+    "image": "photos/catalogo/cat-03-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-03.webp"
+  },
+  {
+    "id": 4,
+    "name": "Dracenas em vasos",
+    "group": "Folhagens",
+    "note": "Seleção de exemplares em vasos de cultivo.",
+    "image": "photos/catalogo/cat-04-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-04.webp"
+  },
+  {
+    "id": 5,
+    "name": "Filodendro rubro",
+    "group": "Folhagens",
+    "note": "Folhagem verde com hastes avermelhadas.",
+    "image": "photos/catalogo/cat-05-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-05.webp"
+  },
+  {
+    "id": 6,
+    "name": "Dracena de folhas finas",
+    "group": "Folhagens",
+    "note": "Folhagem densa com folhas estreitas.",
+    "image": "photos/catalogo/cat-06-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-06.webp"
+  },
+  {
+    "id": 7,
+    "name": "Costela-de-adão",
+    "group": "Folhagens",
+    "note": "Folhas recortadas e presença tropical.",
+    "image": "photos/catalogo/cat-07-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-07.webp"
+  },
+  {
+    "id": 8,
+    "name": "Folhagem tropical de folhas largas",
+    "group": "Folhagens",
+    "note": "Folhas arredondadas com textura marcada.",
+    "image": "photos/catalogo/cat-08-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-08.webp"
+  },
+  {
+    "id": 9,
+    "name": "Pau-d’água",
+    "group": "Folhagens",
+    "note": "Tronco com diferentes alturas de folhagem.",
+    "image": "photos/catalogo/cat-09-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-09.webp"
+  },
+  {
+    "id": 11,
+    "name": "Folhagem de folhas onduladas",
+    "group": "Folhagens",
+    "note": "Detalhe de folhas largas e brilhantes.",
+    "image": "photos/catalogo/cat-11-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-11.webp"
+  },
+  {
+    "id": 12,
+    "name": "Palmeira ornamental",
+    "group": "Palmeiras",
+    "note": "Exemplar com frondes leves e delicadas.",
+    "image": "photos/catalogo/cat-12-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-12.webp"
+  },
+  {
+    "id": 14,
+    "name": "Areca-bambu",
+    "group": "Palmeiras",
+    "note": "Touceira de frondes finas em vaso.",
+    "image": "photos/catalogo/cat-14-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-14.webp"
+  },
+  {
+    "id": 15,
+    "name": "Bambu-da-sorte trançado",
+    "group": "Composições",
+    "note": "Hastes trançadas em vaso preto e azul.",
+    "image": "photos/catalogo/cat-15-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-15.webp"
+  },
+  {
+    "id": 16,
+    "name": "Bambu-da-sorte em vasos decorativos",
+    "group": "Composições",
+    "note": "Duas opções de recipiente para hastes trançadas.",
+    "image": "photos/catalogo/cat-16-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-16.webp"
+  },
+  {
+    "id": 17,
+    "name": "Primavera rosa",
+    "group": "Flores",
+    "note": "Exemplar com tronco escultural e floração rosa.",
+    "image": "photos/catalogo/cat-17-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-17.webp"
+  },
+  {
+    "id": 20,
+    "name": "Pata-de-elefante",
+    "group": "Folhagens",
+    "note": "Base escultural e folhas longas em vaso de barro.",
+    "image": "photos/catalogo/cat-20-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-20.webp"
+  },
+  {
+    "id": 21,
+    "name": "Jiboia no tutor",
+    "group": "Folhagens",
+    "note": "Folhagem conduzida verticalmente em vaso claro.",
+    "image": "photos/catalogo/cat-21-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-21.webp"
+  },
+  {
+    "id": 22,
+    "name": "Iuca em vaso",
+    "group": "Folhagens",
+    "note": "Tronco e folhas pontiagudas em recipiente claro.",
+    "image": "photos/catalogo/cat-22-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-22.webp"
+  },
+  {
+    "id": 23,
+    "name": "Folhagem tropical em vaso claro",
+    "group": "Folhagens",
+    "note": "Folhas brilhantes em composição compacta.",
+    "image": "photos/catalogo/cat-23-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-23.webp"
+  },
+  {
+    "id": 24,
+    "name": "Filodendro em vaso claro",
+    "group": "Folhagens",
+    "note": "Folhas verdes e hastes de tom rubro.",
+    "image": "photos/catalogo/cat-24-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-24.webp"
+  },
+  {
+    "id": 26,
+    "name": "Monstera de folhas perfuradas",
+    "group": "Folhagens",
+    "note": "Folhagem com recortes naturais em tutor.",
+    "image": "photos/catalogo/cat-26-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-26.webp"
+  },
+  {
+    "id": 27,
+    "name": "Ficus-lira",
+    "group": "Folhagens",
+    "note": "Folhas marcadas em vaso alto de tom neutro.",
+    "image": "photos/catalogo/cat-27-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-27.webp"
+  },
+  {
+    "id": 28,
+    "name": "Palmeira-azul",
+    "group": "Palmeiras",
+    "note": "Referência de porte e folhagem em ambiente externo.",
+    "reference": true,
+    "image": "photos/catalogo/cat-28-640.webp",
+    "treatment": "Foto original em ambiente externo",
+    "original": "photos/catalogo/original-28.webp"
+  },
+  {
+    "id": 29,
+    "name": "Palmeira de grande porte",
+    "group": "Palmeiras",
+    "note": "Referência de porte; condições de fornecimento sob consulta.",
+    "reference": true,
+    "image": "photos/catalogo/cat-29-640.webp",
+    "treatment": "Foto original em ambiente externo",
+    "original": "photos/catalogo/original-29.webp"
+  },
+  {
+    "id": 30,
+    "name": "Conífera ornamental",
+    "group": "Folhagens",
+    "note": "Folhagem vertical de textura fina.",
+    "image": "photos/catalogo/cat-30-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-30.webp"
+  },
+  {
+    "id": 31,
+    "name": "Ramos ornamentais com brotos",
+    "group": "Flores",
+    "note": "Detalhe de ramos para composições decorativas.",
+    "image": "photos/catalogo/cat-31-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-31.webp"
+  },
+  {
+    "id": 32,
+    "name": "Primavera laranja",
+    "group": "Flores",
+    "note": "Detalhe da floração em tons de laranja.",
+    "image": "photos/catalogo/cat-32-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-32.webp"
+  },
+  {
+    "id": 33,
+    "name": "Composição de suculentas",
+    "group": "Composições",
+    "note": "Referência de composição em recipiente azul.",
+    "reference": true,
+    "image": "photos/catalogo/cat-33-640.webp",
+    "treatment": "Foto com fundo padronizado",
+    "original": "photos/catalogo/original-33.webp"
+  }
+]

@@ -18,10 +18,9 @@
     if (Math.abs(video.currentTime - targetTime) >= .5 / fps) video.currentTime = targetTime;
   }
 
-  video.src = 'photos/paisagistas-scroll.mp4';
   video.muted = true;
   video.playsInline = true;
-  video.preload = 'auto';
+  video.preload = 'none';
 
   function draw() {
     if (!ready || video.readyState < 2 || !canvas.width || !canvas.height) return;
@@ -81,5 +80,19 @@
 
   resize();
   syncToScroll();
-  video.load();
+  const startVideo = () => {
+    if (video.getAttribute('src')) return;
+    video.src = 'photos/paisagistas-scroll.mp4';
+    video.preload = 'auto';
+    video.load();
+  };
+  if ('IntersectionObserver' in window) {
+    const loadObserver = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) {
+        startVideo();
+        loadObserver.disconnect();
+      }
+    }, { rootMargin: '250px' });
+    loadObserver.observe(panel);
+  } else startVideo();
 })();

@@ -14,7 +14,11 @@
       slide.setAttribute('aria-hidden', String(!main));
       const video = slide.querySelector('video');
       if (video) {
-        if (main && visible && !reduced.matches) video.play().catch(() => {});
+        if (main && visible && !reduced.matches) {
+          const source = video.querySelector('source[data-src]');
+          if (source) { source.src = source.dataset.src; delete source.dataset.src; video.load(); }
+          video.play().catch(() => {});
+        }
         else video.pause();
       }
     });

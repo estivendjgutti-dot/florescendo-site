@@ -1,0 +1,27 @@
+
+.events { background: var(--blush); border-bottom: 1px solid var(--line); }
+.section-action { margin-top: 30px; text-align: center; }
+.catalog-intro { max-width: 720px; margin: 0 auto 24px; text-align: center; color: var(--muted); }
+.catalog-filters { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 28px; }
+.catalog-filters button { border: 1px solid var(--line); border-radius: 999px; background: var(--paper); color: var(--vinho-dark); padding: 10px 15px; cursor: pointer; }
+.catalog-filters button[aria-pressed=true] { color: white; background: var(--vinho); }
+.catalog-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; }
+.catalog-card { overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: var(--paper); }
+.catalog-card[hidden] { display: none; }
+.catalog-photo { display: block; background: var(--blush); }
+.catalog-photo img { width: 100%; aspect-ratio: 4/5; object-fit: contain; height: auto; }
+.catalog-body { padding: 16px; }
+.catalog-body h3 { font-size: 21px; line-height: 1.2; margin: 7px 0 10px; color: var(--vinho-dark); }
+.catalog-body p { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+.catalog-ref { color: var(--oliva); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+.catalog-more { display: block; margin: 24px auto 0; cursor: pointer; }
+.catalog-more[hidden] { display: none; }
+.catalog-status { color: var(--muted); text-align: center; font-size: 13px; }
+.contact-details { color: var(--muted); overflow-wrap: anywhere; }
+.catalog-dialog { width: min(900px,calc(100% - 24px)); max-height: 90dvh; border: 1px solid var(--line); border-radius: 20px; background: var(--paper); padding: 18px; }
+.catalog-dialog::backdrop { background: #240d1abb; }
+.catalog-dialog img { width: 100%; height: min(60dvh,650px); object-fit: contain; background: var(--blush); }
+.catalog-dialog button { border: 1px solid var(--line); background: var(--paper); border-radius: 999px; padding: 10px 14px; cursor: pointer; }
+.catalog-detail-actions { display: flex; justify-content: space-between; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+@media(max-width:1000px) { .catalog-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+@media(max-width:600px) { .catalog-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; } .catalog-body { padding: 12px; } .catalog-body h3 { font-size: 18px; } .catalog-body .text-link { font-size: 12px; } }
