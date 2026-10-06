@@ -28,7 +28,7 @@
   },
   {
     "id": 6,
-    "name": "Pleomele de folhas finas",
+    "name": "Pleomele",
     "group": "Folhagens",
     "note": "Folhagem densa com folhas estreitas.",
     "image": "photos/catalogo/cat-06-640.webp",
@@ -46,7 +46,7 @@
   },
   {
     "id": 8,
-    "name": "Folhagem tropical de folhas largas",
+    "name": "Amarantha charuto",
     "group": "Folhagens",
     "note": "Folhas arredondadas com textura marcada.",
     "image": "photos/catalogo/cat-08-640.webp",
@@ -64,7 +64,7 @@
   },
   {
     "id": 11,
-    "name": "Folhagem de folhas onduladas",
+    "name": "Philodendro ondulado",
     "group": "Folhagens",
     "note": "Detalhe de folhas largas e brilhantes.",
     "image": "photos/catalogo/cat-11-640.webp",
@@ -73,7 +73,7 @@
   },
   {
     "id": 12,
-    "name": "Palmeira ornamental",
+    "name": "Palmeira Areca",
     "group": "Palmeiras",
     "note": "Exemplar com frondes leves e delicadas.",
     "image": "photos/catalogo/cat-12-640.webp",
@@ -82,7 +82,7 @@
   },
   {
     "id": 14,
-    "name": "Areca-bambu",
+    "name": "Palmeira Areca",
     "group": "Palmeiras",
     "note": "Touceira de frondes finas em vaso.",
     "image": "photos/catalogo/cat-14-640.webp",
@@ -145,7 +145,7 @@
   },
   {
     "id": 23,
-    "name": "Folhagem tropical em vaso claro",
+    "name": "Philodendro coração",
     "group": "Folhagens",
     "note": "Folhas brilhantes em composição compacta.",
     "image": "photos/catalogo/cat-23-640.webp",
@@ -154,7 +154,7 @@
   },
   {
     "id": 24,
-    "name": "Filodendro em vaso claro",
+    "name": "Philodendro Rubro",
     "group": "Folhagens",
     "note": "Folhas verdes e hastes de tom rubro.",
     "image": "photos/catalogo/cat-24-640.webp",
@@ -163,7 +163,7 @@
   },
   {
     "id": 26,
-    "name": "Monstera de folhas perfuradas",
+    "name": "Costela de eva",
     "group": "Folhagens",
     "note": "Folhagem com recortes naturais em tutor.",
     "image": "photos/catalogo/cat-26-640.webp",
@@ -201,7 +201,7 @@
   },
   {
     "id": 30,
-    "name": "Conífera ornamental",
+    "name": "Kaizuka",
     "group": "Folhagens",
     "note": "Folhagem vertical de textura fina.",
     "image": "photos/catalogo/cat-30-640.webp",
@@ -210,7 +210,7 @@
   },
   {
     "id": 31,
-    "name": "Ramos ornamentais com brotos",
+    "name": "Vimi Algodão",
     "group": "Flores",
     "note": "Detalhe de ramos para composições decorativas.",
     "image": "photos/catalogo/cat-31-640.webp",
