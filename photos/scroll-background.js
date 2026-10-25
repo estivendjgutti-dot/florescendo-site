@@ -82,7 +82,7 @@
   syncToScroll();
   const startVideo = () => {
     if (video.getAttribute('src')) return;
-    video.src = 'photos/paisagistas-scroll.mp4';
+    video.src = 'photos/paisagistas-scroll.mp4?v=marca20261025';
     video.preload = 'auto';
     video.load();
   };

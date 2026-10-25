@@ -63,3 +63,12 @@
 - Preservar a hero aprovada. Não aplicar parallax a vídeos, não alterar o enquadramento das fotos nem a mecânica de swipe.
 - Usar IntersectionObserver e movimentos curtos por transform/opacity, sem bibliotecas. Rolagem agenda no máximo um frame por evento; não manter um loop de renderização em repouso.
 - Nunca esconder conteúdo permanentemente para aguardar JavaScript. Respeitar prefers-reduced-motion, inclusive quando a preferência mudar durante a visita. Animações decorativas pausam fora da tela.
+
+## Marca d'água das mídias — 25/10/2026
+
+- Gravar a assinatura semitransparente “Florescendo” e `florescendoflores.com.br` nos arquivos de fotos e vídeos, incluindo miniaturas, capas, ampliações, referências originais do catálogo e mídias antigas ainda presentes na pasta pública.
+- A marca deve ficar dentro do enquadramento, na faixa central inferior, sem cobrir o rosto da idealizadora. Não inserir bloqueios de botão direito, seleção, toque prolongado ou reprodução.
+- Logos, ícones, favicon, captura de interface do Instagram e mockup do celular não recebem marca.
+- Preservar as cópias sem marca fora da pasta pública: `C:/Clientes/Florescendo/Midias-originais-preservadas/2026-10-25/`. Manifestos SHA-256 registram originais e derivados.
+- Processo local de aplicação: `C:/Clientes/Florescendo/ferramentas/marcar-midias.py`. Sempre partir das cópias sem marca; não sobrepor novas marcas nos arquivos já marcados. Fotos e vídeos novos precisam passar pelo mesmo processo antes de publicar.
+- Manter controles, formatos, proporções, duração e fps dos vídeos. A marca está gravada durante todo o filme, não apenas sobreposta pelo navegador.

@@ -27,7 +27,7 @@ if (catalog) {
   const toggle = dialog.querySelector('[data-original]');
   let entry, original = false, data;
   async function getData() {
-    if (!data) data = fetch('/photos/catalogo/items.json').then(response => {
+    if (!data) data = fetch('/photos/catalogo/items.json?v=marca20261025').then(response => {
       if (!response.ok) throw new Error('Catálogo indisponível');
       return response.json();
     }).catch(error => { data = undefined; throw error; });
