@@ -14,4 +14,7 @@
 - Reproduzir sem áudio em loop quando estiver visível; oferecer controles nativos de pausa e tela cheia. Respeitar pausa manual, movimento reduzido e economia de dados.
 - Arquivo público: `photos/eventos/agencia-carros.mp4`; capa: `photos/eventos/agencia-carros-capa.webp`.
 - Vídeo original, base tratada, cortes e versão de edição ficam em `C:/Clientes/Florescendo/Video/evento-agencia-edicao/`.
-- Próximo material: oito fotos do mesmo evento. Organizar em carrossel separado e identificado como o mesmo trabalho; selecionar uma capa e sequência após receber as fotos. Evitar mural longo que afaste o vídeo e os CTAs no celular.
+- Oito fotos recebidas e tratadas: carrossel separado abaixo do vídeo, com swipe, setas e ampliação. A sequência abre com o resultado na agência, segue por detalhes e termina com opções em vasos e preparação.
+- As fotos 04–07 mostram a agência; 01 e 08 são composições/opções, e 02–03 são preparação. As legendas distinguem os contextos sem atribuir todas as imagens ao mesmo evento.
+- Quadros padronizados em 3:4, arquivos de 480 × 640 e 960 × 1280 em WebP. Preservar o enquadramento completo das fotos horizontais, com margem blush. A ampliação usa uma versão separada na proporção natural.
+- Originais, versões tratadas e prompts: `C:/Clientes/Florescendo/Fotos-eventos/locacao/`. Na foto 02 foi retirada a interface do WhatsApp; na 08, somente o fundo de propaganda e o piso foram substituídos por um cenário neutro de produto.
