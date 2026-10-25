@@ -75,3 +75,6 @@
 .gallery-more { margin-top: 18px; text-align: center; }
 .illustrative-gallery .rental-gallery { margin-bottom: 20px; }
 @media (min-width: 760px) { .illustrative-gallery .rental-gallery-track { grid-auto-columns: calc((100% - 54px) / 4); } }
+@media (min-width: 760px) {
+  .illustrative-gallery .rental-gallery-track:has(> :last-child:nth-child(2)) { grid-auto-columns: minmax(0, 300px); justify-content: center; }
+}

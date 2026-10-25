@@ -37,3 +37,5 @@
   .garden-comparison:not(.garden-interiors):not(.garden-backstage) figcaption { font-size: 12px; }
   .garden-comparison:not(.garden-interiors):not(.garden-backstage) figcaption strong { font-size: 14px; }
 }
+.garden-comparison a.btn { display: inline-flex; }
+.garden-interiors > p { max-width: 680px; }

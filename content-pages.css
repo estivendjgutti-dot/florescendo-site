@@ -34,3 +34,5 @@
 .crumbs a { display: inline-block; padding: 11px 0; }
 .gallery-more .card-link { display: inline-block; padding: 12px 0; color: var(--wine); font-weight: 700; }
 .gallery-more .card-link:hover { text-decoration: underline; }
+@media (min-width: 900px) { .split-grid:has(> .info-box) { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.content-section > .content-wrap > .note { max-width: 760px; }

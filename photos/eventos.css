@@ -176,3 +176,7 @@
 #historia + #instagram { padding-top: 24px; }
 @media (min-width: 760px) { #historia + #instagram { padding-top: 40px; } }
 #historia:has(+ #instagram) { padding-bottom: 28px; }
+@media (min-width: 760px) {
+  .partner-band-inner { align-items: center; }
+  .partner-band-inner .btn { white-space: nowrap; }
+}
