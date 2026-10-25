@@ -140,3 +140,22 @@
   .catalog-preview { grid-auto-flow: row; grid-template-columns: repeat(4, minmax(0, 1fr)); overflow: visible; }
   .partner-band-inner { grid-template-columns: auto 1fr auto; justify-items: start; text-align: left; gap: 28px; }
 }
+
+.nowrap { white-space: nowrap; }
+.brand-sub { font-size: 10px; letter-spacing: .16em; }
+.rental-gallery-tag, .catalog-ref { font-size: 11px; }
+.footer-links a { display: inline-block; padding: 11px 0; }
+.footer-links { gap: 0; }
+.care-card { display: grid; grid-template-columns: auto 1fr; column-gap: 14px; align-items: center; }
+.care-card .card-icon { grid-row: 1 / span 2; margin: 0; }
+.care-card .card-icon + span { grid-column: 2; }
+.care-card h3 { grid-column: 2; margin: 2px 0 0; font-size: 21px; }
+.care-card p { grid-column: 1 / -1; margin-top: 12px; }
+@media (min-width: 760px) {
+  .footer-links a { padding: 2px 0; }
+  .footer-links { gap: 7px; }
+  .care-card { display: block; }
+  .care-card .card-icon { margin-bottom: 16px; }
+  .care-card h3 { margin: 12px 0 8px; font-size: 23px; }
+  .care-card p { margin-top: 0; }
+}

@@ -12,3 +12,19 @@
 .dev-credit { display: block; margin-top: 6px; opacity: .75; }
 .dev-credit a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 @media (min-width: 760px) { .dev-credit { display: inline; margin: 0 0 0 .6em; } .dev-credit::before { content: "·"; margin-right: .6em; } }
+.nowrap { white-space: nowrap; }
+.c-brand-sub { font-size: 10px; letter-spacing: .14em; }
+.footer-menu a { display: inline-block; padding: 11px 0; }
+.footer-menu { gap: 0; }
+.info-box { display: grid; grid-template-columns: auto 1fr; column-gap: 14px; align-items: center; }
+.info-box .card-icon { margin: 0; }
+.info-box > :not(.card-icon):not(h2):not(h3) { grid-column: 1 / -1; }
+.info-box h2, .info-box h3 { margin: 0; font-size: 22px; }
+.info-box h2 + p, .info-box h3 + p { margin-top: 12px; }
+@media (min-width: 760px) {
+  .footer-menu a { padding: 2px 0; }
+  .footer-menu { gap: 8px; }
+  .info-box { display: block; }
+  .info-box .card-icon { margin-bottom: 16px; }
+  .info-box h2, .info-box h3 { margin: 0 0 10px; font-size: 25px; }
+}
