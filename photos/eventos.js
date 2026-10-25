@@ -1,6 +1,4 @@
-const film = document.querySelector('.event-case-video');
-
-if (film) {
+document.querySelectorAll('.event-case-video, .garden-transform-video').forEach(film => {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const connection = navigator.connection;
   let visible = false;
@@ -61,7 +59,7 @@ if (film) {
     if (reducedMotion.matches) pause();
     else play();
   });
-}
+});
 
 const rentalGallery = document.querySelector('.rental-gallery');
 if (rentalGallery) {

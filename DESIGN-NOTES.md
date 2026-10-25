@@ -25,3 +25,11 @@
 - Comparativo inicial de uma varanda: primeiro anexo é Antes; segundo é Depois. Os pontos de vista são diferentes. Usar duas fotos identificadas, sem slider de sobreposição que sugira alinhamento exato.
 - Manter portas, mobiliário, plantas, vasos e elementos existentes em cada etapa. Não simular melhorias físicas durante o tratamento.
 - Apresentação 4:3, sem distorção, com versões responsivas e acesso à ampliação. Originais e tratamentos em `C:/Clientes/Florescendo/Fotos-jardinagem/primeiro-antes-depois/`.
+
+## Transformação em vídeo — jardim junto à piscina
+
+- Os vídeos `Video/antes.mp4` e `Video/depois.mp4` correspondem a outro ambiente, junto à piscina. Não apresentar como se fossem a varanda das fotos.
+- Edição única de aproximadamente 17,4 s, 450 × 800 (9:16), 30 fps: antes 13,0–16,6 s; depois 0,4–14,8 s. Transição em dissolvência de 0,6 s, rótulos Antes/Depois e assinatura Florescendo.
+- Tratamento com estabilização suave, exposição/cores equilibradas e nitidez discreta. Não gerar nem alterar elementos do jardim.
+- Publicar em `#jardinagem` com capa estática, reprodução silenciosa em loop e controles; respeitar pausa manual, movimento reduzido e economia de dados.
+- Arquivo para o site: `photos/jardinagem/piscina-transformacao.mp4`. Originais e edição/receita em `C:/Clientes/Florescendo/Video/transformacao-jardinagem/`.
