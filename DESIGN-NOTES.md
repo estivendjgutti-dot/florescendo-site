@@ -40,3 +40,10 @@
 - Apresentar em bloco próprio de jardinagem, sem atribuir essas imagens ao mesmo trabalho da varanda ou da piscina.
 - Título escolhido: Montamos o seu jardim. Imagens tratadas em 3:4, em duas colunas compactas e com ampliação.
 - Originais, tratamentos e prompts em `C:/Clientes/Florescendo/Fotos-jardinagem/bastidores/`.
+
+## Plantas, montagem e curadoria — apartamentos e salas comerciais
+
+- Bloco próprio em Jardinagem, com quatro fotos reais: composição em vaso junto à cortina, montagem em jardineiras, varanda e composição sob a escada.
+- A imagem com materiais e terra no piso é identificada como montagem em andamento. As demais não são atribuídas a um único cliente ou endereço.
+- Tratamento fotográfico discreto antes de publicar, mantendo plantas, vasos, arquitetura, clima e materiais de trabalho. Apresentação 4:3 e ampliação na proporção natural.
+- CTA específico sempre para +5511960341653. Originais e prompts em `C:/Clientes/Florescendo/Fotos-jardinagem/apartamentos-salas/`.

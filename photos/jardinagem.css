@@ -20,6 +20,13 @@
 .garden-backstage img { aspect-ratio: 3 / 4; }
 .garden-backstage figcaption { font-size: 13px; }
 .garden-backstage figcaption strong { font-size: 15px; }
+.garden-interiors { max-width: 960px; }
+.garden-interiors .garden-comparison-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.garden-interiors figcaption strong { font-size: 15px; }
+@media (max-width: 600px) {
+  .garden-interiors figcaption { font-size: 12px; }
+  .garden-interiors figcaption strong { font-size: 14px; }
+}
 @media (max-width: 600px) {
   .garden-comparison-grid { grid-template-columns: 1fr; gap: 22px; }
   .garden-comparison { margin: 26px auto 30px; }
