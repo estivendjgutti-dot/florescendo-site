@@ -162,3 +162,17 @@
 .card-body .text-link, .story-more .text-link { display: inline-block; padding: 14px 0; }
 .partner-band .card-icon { background: #fff; }
 .hero-identity .eyebrow { font-size: 11px; }
+.story-cta { padding: 56px 0 64px; background: var(--rose); }
+.story-cta-inner { display: grid; justify-items: center; gap: 12px; max-width: 640px; text-align: center; }
+.story-cta .card-icon { margin: 0; background: #fff; }
+.story-cta h2 { margin: 4px 0 0; color: var(--vinho-dark); font: 500 clamp(28px, 3.4vw, 40px)/1.12 'Playfair Display', Georgia, serif; }
+.story-cta p { margin: 0 0 8px; color: var(--muted); }
+.story-cta-actions { display: grid; gap: 10px; width: 100%; }
+.story-cta-actions .btn { width: 100%; }
+@media (min-width: 760px) {
+  .story-cta-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+  .story-cta-actions .btn { width: auto; }
+}
+#historia + #instagram { padding-top: 24px; }
+@media (min-width: 760px) { #historia + #instagram { padding-top: 40px; } }
+#historia:has(+ #instagram) { padding-bottom: 28px; }
