@@ -27,14 +27,15 @@ if (catalog) {
   const toggle = dialog.querySelector('[data-original]');
   let entry, original = false, data;
   async function getData() {
-    if (!data) data = fetch('photos/catalogo/items.json').then(response => {
+    if (!data) data = fetch('/photos/catalogo/items.json').then(response => {
       if (!response.ok) throw new Error('Catálogo indisponível');
       return response.json();
     }).catch(error => { data = undefined; throw error; });
     return data;
   }
   function display() {
-    image.src = original ? entry.original : entry.image.replace('-640.', '-960.');
+    const path = original ? entry.original : entry.image.replace('-640.', '-960.');
+    image.src = path.startsWith('/') ? path : '/' + path;
     image.alt = entry.name + (original ? ' — foto original' : ' — catálogo');
     toggle.textContent = original ? 'Ver imagem do catálogo' : 'Ver foto original';
     dialog.querySelector('.catalog-detail-note').textContent = original ? 'Referência original recebida. Consulte o exemplar e o vaso disponíveis.' : `${entry.treatment}. ${entry.note} Consulte disponibilidade, porte e vaso.`;

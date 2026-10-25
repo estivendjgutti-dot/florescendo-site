@@ -127,3 +127,16 @@
 .dev-credit { display: block; margin-top: 6px; opacity: .75; }
 .dev-credit a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 @media (min-width: 760px) { .dev-credit { display: inline; margin: 0 0 0 .6em; } .dev-credit::before { content: "·"; margin-right: .6em; } }
+.catalog-preview { display: grid; grid-auto-flow: column; grid-auto-columns: 62%; grid-template-columns: none; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 10px; }
+.catalog-preview .catalog-card { scroll-snap-align: start; }
+.partner-band { padding: 52px 0; background: var(--rose); }
+.partner-band-inner { display: grid; justify-items: center; gap: 14px; text-align: center; max-width: 900px; }
+.partner-band .card-icon { margin: 0; }
+.partner-band h2 { margin: 8px 0 8px; color: var(--vinho-dark); font: 500 clamp(26px, 3.2vw, 36px)/1.15 'Playfair Display', Georgia, serif; }
+.partner-band p { margin: 0; color: var(--muted); }
+.story-more { margin: 4px 0 18px; }
+@media (max-width: 759px) { #historia .story-media { min-height: 300px; } }
+@media (min-width: 760px) {
+  .catalog-preview { grid-auto-flow: row; grid-template-columns: repeat(4, minmax(0, 1fr)); overflow: visible; }
+  .partner-band-inner { grid-template-columns: auto 1fr auto; justify-items: start; text-align: left; gap: 28px; }
+}

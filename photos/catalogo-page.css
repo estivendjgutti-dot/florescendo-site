@@ -1,0 +1,6 @@
+:root { --vinho: var(--wine); --vinho-dark: var(--wine-dark); --oliva: var(--olive); --rosa: var(--pink); }
+.catalog-full { scroll-margin-top: 90px; }
+.catalog-full .text-link { color: var(--wine); font-weight: 700; font-size: 13px; text-decoration: none; }
+.catalog-dialog .btn { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 18px; border-radius: 999px; font-weight: 700; text-decoration: none; }
+.catalog-dialog .btn-primary { color: #fff; background: var(--wine); }
+.catalog-more { min-height: 44px; padding: 10px 20px; border: 1px solid var(--wine); border-radius: 999px; color: var(--wine); background: transparent; font-weight: 700; }
