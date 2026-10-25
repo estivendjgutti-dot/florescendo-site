@@ -61,8 +61,7 @@ document.querySelectorAll('.event-case-video, .garden-transform-video').forEach(
   });
 });
 
-const rentalGallery = document.querySelector('.rental-gallery');
-if (rentalGallery) {
+document.querySelectorAll('.rental-gallery').forEach(rentalGallery => {
   const track = rentalGallery.querySelector('.rental-gallery-track');
   const cards = [...track.querySelectorAll('.rental-gallery-card')];
   const links = cards.map(card => card.querySelector('.rental-gallery-image'));
@@ -109,7 +108,7 @@ if (rentalGallery) {
   else window.addEventListener('resize', updateStatus);
   updateStatus();
 
-  const dialog = document.querySelector('.rental-photo-dialog');
+  const dialog = rentalGallery.nextElementSibling;
   let selected = 0;
   function displayPhoto(index) {
     selected = (index + links.length) % links.length;
@@ -141,4 +140,4 @@ if (rentalGallery) {
     const rect = dialog.getBoundingClientRect();
     if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
   });
-}
+});

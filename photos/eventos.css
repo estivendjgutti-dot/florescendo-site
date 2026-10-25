@@ -74,7 +74,7 @@
   background: var(--blush);
   cursor: zoom-in;
 }
-.rental-gallery-image img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; }
+.rental-gallery-image img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
 .rental-gallery-card figcaption { padding: 12px 2px 0; color: var(--muted); font-size: 14px; }
 .rental-gallery-tag { display: block; margin-bottom: 4px; color: var(--oliva); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; }
 .rental-gallery-controls { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 14px; }

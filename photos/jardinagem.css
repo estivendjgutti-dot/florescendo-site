@@ -5,7 +5,7 @@
 .garden-comparison figure { margin: 0; min-width: 0; }
 .garden-comparison a { display: block; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: var(--blush); cursor: zoom-in; }
 .garden-comparison a:focus-visible { outline: 2px solid var(--vinho); outline-offset: 3px; }
-.garden-comparison img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; }
+.garden-comparison img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
 .garden-comparison figcaption { padding: 12px 2px 0; color: var(--muted); font-size: 14px; }
 .garden-comparison figcaption strong { display: block; margin-bottom: 4px; color: var(--vinho-dark); font-size: 16px; }
 .garden-comparison .garden-comparison-note { margin: 16px 0 0; font-size: 12px; }
@@ -21,12 +21,7 @@
 .garden-backstage figcaption { font-size: 13px; }
 .garden-backstage figcaption strong { font-size: 15px; }
 .garden-interiors { max-width: 960px; }
-.garden-interiors .garden-comparison-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.garden-interiors figcaption strong { font-size: 15px; }
-@media (max-width: 600px) {
-  .garden-interiors figcaption { font-size: 12px; }
-  .garden-interiors figcaption strong { font-size: 14px; }
-}
+.garden-interiors .rental-gallery { margin: 0 auto 8px; }
 @media (max-width: 600px) {
   .garden-comparison-grid { grid-template-columns: 1fr; gap: 22px; }
   .garden-comparison { margin: 26px auto 30px; }
