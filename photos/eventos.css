@@ -115,3 +115,15 @@
   .rental-photo-dialog h3 { font-size: 21px; }
   .rental-photo-dialog img { height: 57dvh; }
 }
+.page-first { padding-top: 56px; }
+.page-first h1 { margin: 0 0 14px; color: var(--vinho-dark); font: 500 clamp(34px, 4.4vw, 54px)/1.08 'Playfair Display', Georgia, serif; }
+.card-icon { display: inline-grid; place-items: center; width: 42px; height: 42px; margin-bottom: 12px; border-radius: 50%; background: var(--rose); color: var(--vinho); }
+.card-icon svg { width: 22px; height: 22px; }
+.care-card .card-icon + span { display: block; }
+@media (min-width: 760px) {
+  .card-icon { width: 48px; height: 48px; margin-bottom: 16px; }
+  .card-icon svg { width: 25px; height: 25px; }
+}
+.dev-credit { display: block; margin-top: 6px; opacity: .75; }
+.dev-credit a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+@media (min-width: 760px) { .dev-credit { display: inline; margin: 0 0 0 .6em; } .dev-credit::before { content: "·"; margin-right: .6em; } }
