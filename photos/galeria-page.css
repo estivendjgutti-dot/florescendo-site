@@ -73,3 +73,5 @@
 }
 .rental-gallery-tag, .catalog-ref { font-size: 11px; }
 .gallery-more { margin-top: 18px; text-align: center; }
+.illustrative-gallery .rental-gallery { margin-bottom: 20px; }
+@media (min-width: 760px) { .illustrative-gallery .rental-gallery-track { grid-auto-columns: calc((100% - 54px) / 4); } }
