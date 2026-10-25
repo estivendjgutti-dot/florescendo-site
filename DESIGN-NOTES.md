@@ -18,3 +18,10 @@
 - As fotos 04–07 mostram a agência; 01 e 08 são composições/opções, e 02–03 são preparação. As legendas distinguem os contextos sem atribuir todas as imagens ao mesmo evento.
 - Quadros padronizados em 3:4, arquivos de 480 × 640 e 960 × 1280 em WebP. Preservar o enquadramento completo das fotos horizontais, com margem blush. A ampliação usa uma versão separada na proporção natural.
 - Originais, versões tratadas e prompts: `C:/Clientes/Florescendo/Fotos-eventos/locacao/`. Na foto 02 foi retirada a interface do WhatsApp; na 08, somente o fundo de propaganda e o piso foram substituídos por um cenário neutro de produto.
+
+## Fotos de jardinagem e comparativos
+
+- Tratar todas as novas imagens no padrão fotográfico definido antes da publicação: luz equilibrada, cores naturais, contraste e nitidez discretos, mantendo os registros reais.
+- Comparativo inicial de uma varanda: primeiro anexo é Antes; segundo é Depois. Os pontos de vista são diferentes. Usar duas fotos identificadas, sem slider de sobreposição que sugira alinhamento exato.
+- Manter portas, mobiliário, plantas, vasos e elementos existentes em cada etapa. Não simular melhorias físicas durante o tratamento.
+- Apresentação 4:3, sem distorção, com versões responsivas e acesso à ampliação. Originais e tratamentos em `C:/Clientes/Florescendo/Fotos-jardinagem/primeiro-antes-depois/`.
