@@ -159,3 +159,6 @@
   .care-card h3 { margin: 12px 0 8px; font-size: 23px; }
   .care-card p { margin-top: 0; }
 }
+.card-body .text-link, .story-more .text-link { display: inline-block; padding: 14px 0; }
+.partner-band .card-icon { background: #fff; }
+.hero-identity .eyebrow { font-size: 11px; }
