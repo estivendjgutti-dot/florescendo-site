@@ -33,3 +33,10 @@
 - Tratamento com estabilização suave, exposição/cores equilibradas e nitidez discreta. Não gerar nem alterar elementos do jardim.
 - Publicar em `#jardinagem` com capa estática, reprodução silenciosa em loop e controles; respeitar pausa manual, movimento reduzido e economia de dados.
 - Arquivo para o site: `photos/jardinagem/piscina-transformacao.mp4`. Originais e edição/receita em `C:/Clientes/Florescendo/Video/transformacao-jardinagem/`.
+
+## Bastidores — Montamos o seu jardim
+
+- Duas fotos reais de preparação: materiais no veículo e montagem no local. Manter o aspecto de obra em andamento durante o tratamento.
+- Apresentar em bloco próprio de jardinagem, sem atribuir essas imagens ao mesmo trabalho da varanda ou da piscina.
+- Título escolhido: Montamos o seu jardim. Imagens tratadas em 3:4, em duas colunas compactas e com ampliação.
+- Originais, tratamentos e prompts em `C:/Clientes/Florescendo/Fotos-jardinagem/bastidores/`.
