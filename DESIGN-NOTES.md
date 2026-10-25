@@ -47,3 +47,12 @@
 - A imagem com materiais e terra no piso é identificada como montagem em andamento. As demais não são atribuídas a um único cliente ou endereço.
 - Tratamento fotográfico discreto antes de publicar, mantendo plantas, vasos, arquitetura, clima e materiais de trabalho. Apresentação 4:3 e ampliação na proporção natural.
 - CTA específico sempre para +5511960341653. Originais e prompts em `C:/Clientes/Florescendo/Fotos-jardinagem/apartamentos-salas/`.
+
+## Revisão de navegação e conteúdo — 25/10/2026
+
+- A hero mobile aprovada permanece. Até 370 px, apenas o CTA do cabeçalho é oculto para manter marca e menu dentro da tela; WhatsApp flutuante permanece disponível.
+- Home abre as páginas completas de Catálogo e História pelos menus. O resumo institucional permanece na home.
+- Galeria completa da agência concentrada em `/locacao/`; `/catalogo/flores-para-eventos/` apresenta prévia com acesso ao caso.
+- Cenas genéricas de loja/evento substituídas por fachada e trabalho real. Imagens ilustrativas de orquídeas e terrários identificadas como tal até haver fotos reais equivalentes.
+- Apartamentos: carrossel atual em 4:5, preservando ampliação; vídeo real `photos/jardinagem/montagem-apartamento.mp4`, 14,125 s, 450 × 800, 24 fps, aproximadamente 1,46 MiB. Identificar como montagem em andamento. Receita em `Video/apartamentos-salas-edicao/EDICAO-SITE.md`.
+- FC-28 e FC-29 não possuem foto original publicada. Não oferecer botão para arquivos ausentes.

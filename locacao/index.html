@@ -340,6 +340,7 @@
   <link rel="stylesheet" href="/photos/catalogo.css">
   <link rel="stylesheet" href="/photos/eventos.css?v=7">
   <link rel="stylesheet" href="/photos/jardinagem.css?v=2">
+  <link rel="stylesheet" href="/photos/revisao.css?v=1">
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -355,10 +356,10 @@
   </header>
 
   <main id="conteudo">
-    <section class="section page-first events" id="eventos"><div class="wrap"><div class="section-head"><span class="eyebrow">Locação para eventos</span><h1>Seu evento ganha vida. A montagem fica com a gente.</h1><p>Locação de plantas e flores com entrega, montagem e retirada por conta da Florescendo. Você conta sobre o evento; nossa equipe cuida da composição e da operação.</p></div><article class="event-case" aria-labelledby="event-case-title">
+    <section class="section page-first events" id="eventos"><div class="wrap"><div class="section-head"><span class="eyebrow">Locação para eventos</span><h1>Seu evento ganha vida. A montagem fica com a gente.</h1><p>Locação de plantas e flores com entrega, montagem e retirada por conta da Florescendo. Você conta sobre o evento; nossa equipe cuida da composição e da operação.</p></div><article class="event-case" id="evento-agencia" aria-labelledby="event-case-title">
   <figure class="event-case-media">
     <video class="event-case-video" width="576" height="1024" controls muted loop playsinline preload="none" poster="/photos/eventos/agencia-carros-capa.webp" aria-label="Resultado da ambientação com plantas em um evento em agência de carros">
-      <source data-src="/photos/eventos/agencia-carros.mp4" type="video/mp4">
+      <source src="/photos/eventos/agencia-carros.mp4" type="video/mp4">
       Seu navegador não suporta este vídeo.
     </video>
     <figcaption>Um evento realizado pela Florescendo.</figcaption>
@@ -366,7 +367,7 @@
   </figure>
   <div class="event-case-copy">
     <span class="eyebrow">Veja um evento de perto</span>
-    <h3 id="event-case-title">Ambientação em uma agência de carros.</h3>
+    <h2 id="event-case-title">Ambientação em uma agência de carros.</h2>
     <p>Plantas em vasos e composições distribuídas pelo espaço: veja o resultado da decoração deste evento e inspire-se para a sua ocasião.</p>
     <p class="event-case-services">Entrega, montagem e retirada por conta da Florescendo.</p>
   </div>
@@ -430,5 +431,5 @@
       animatedElements.forEach(element => element.classList.add('is-visible'));
     }
   </script>
-</body>
+<script src="/photos/revisao.js" defer></script></body>
 </html>

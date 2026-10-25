@@ -34,6 +34,7 @@ if (catalog) {
     return data;
   }
   function display() {
+    toggle.hidden = !entry.original;
     const path = original ? entry.original : entry.image.replace('-640.', '-960.');
     image.src = path.startsWith('/') ? path : '/' + path;
     image.alt = entry.name + (original ? ' — foto original' : ' — catálogo');
@@ -52,7 +53,7 @@ if (catalog) {
     } catch { window.location.href = link.href; }
   }));
   dialog.querySelector('[data-close]').addEventListener('click', () => dialog.close());
-  toggle.addEventListener('click', () => { original = !original; display(); });
+  toggle.addEventListener('click', () => { if (entry.original) { original = !original; display(); } });
   dialog.addEventListener('click', event => { if (event.target === dialog) { const rect = dialog.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close(); } });
   render();
 }

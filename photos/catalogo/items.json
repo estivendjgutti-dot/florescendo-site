@@ -187,7 +187,7 @@
     "reference": true,
     "image": "photos/catalogo/cat-28-640.webp",
     "treatment": "Foto original em ambiente externo",
-    "original": "photos/catalogo/original-28.webp"
+    "original": null
   },
   {
     "id": 29,
@@ -197,7 +197,7 @@
     "reference": true,
     "image": "photos/catalogo/cat-29-640.webp",
     "treatment": "Foto original em ambiente externo",
-    "original": "photos/catalogo/original-29.webp"
+    "original": null
   },
   {
     "id": 30,
