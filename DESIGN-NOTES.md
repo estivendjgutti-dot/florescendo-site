@@ -56,3 +56,10 @@
 - Cenas genéricas de loja/evento substituídas por fachada e trabalho real. Imagens ilustrativas de orquídeas e terrários identificadas como tal até haver fotos reais equivalentes.
 - Apartamentos: carrossel atual em 4:5, preservando ampliação; vídeo real `photos/jardinagem/montagem-apartamento.mp4`, 14,125 s, 450 × 800, 24 fps, aproximadamente 1,46 MiB. Identificar como montagem em andamento. Receita em `Video/apartamentos-salas-edicao/EDICAO-SITE.md`.
 - FC-28 e FC-29 não possuem foto original publicada. Não oferecer botão para arquivos ausentes.
+
+## Movimento — mobile first
+
+- `photos/movimento.js` e `photos/movimento.css` compartilham entradas em sequência, resposta ao toque, menu e ampliação animados, progresso de leitura e transições entre páginas nos navegadores compatíveis.
+- Preservar a hero aprovada. Não aplicar parallax a vídeos, não alterar o enquadramento das fotos nem a mecânica de swipe.
+- Usar IntersectionObserver e movimentos curtos por transform/opacity, sem bibliotecas. Rolagem agenda no máximo um frame por evento; não manter um loop de renderização em repouso.
+- Nunca esconder conteúdo permanentemente para aguardar JavaScript. Respeitar prefers-reduced-motion, inclusive quando a preferência mudar durante a visita. Animações decorativas pausam fora da tela.
