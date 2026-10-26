@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/catalogo/plantas",
+      "destination": "/catalogo/",
+      "permanent": true
+    },
+    {
+      "source": "/catalogo/plantas/",
+      "destination": "/catalogo/",
+      "permanent": true
+    }
+  ]
+}
