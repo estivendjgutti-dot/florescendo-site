@@ -1,6 +1,17 @@
 {
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.florescendoflores.com.br"
+        }
+      ],
+      "destination": "https://florescendoflores.com.br/:path*",
+      "permanent": true
+    },
+    {
       "source": "/catalogo/plantas",
       "destination": "/catalogo/",
       "permanent": true
