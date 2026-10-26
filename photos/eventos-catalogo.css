@@ -1,0 +1,11 @@
+.event-catalog-intro { padding-top: 42px; padding-bottom: 44px; }
+.event-catalog-intro h1 { max-width: 850px; margin: 20px 0; font: 500 clamp(36px,6vw,64px)/1.1 'Playfair Display',Georgia,serif; color: var(--wine-dark); }
+.event-catalog-intro p { max-width: 740px; font-size: 18px; }
+.event-reference { display:grid; grid-template-columns:minmax(0,360px) minmax(0,1fr); gap:48px; align-items:center; }
+.event-reference figure { margin:0; }
+.event-reference img { display:block; width:100%; height:auto; border-radius:20px; }
+.event-reference figcaption { font-size:13px; color:var(--muted); margin-top:12px; }
+.event-rental-note { border-top:1px solid var(--line); padding-top:24px; }
+.info-box h3 { font:500 25px/1.25 'Playfair Display',Georgia,serif; color:var(--wine-dark); }
+#composicoes { scroll-margin-top:100px; }
+@media(max-width:760px) { .event-reference { grid-template-columns:1fr; gap:24px; } .event-reference figure { max-width:360px; margin:auto; } .event-catalog-intro { padding-top:28px; } }
