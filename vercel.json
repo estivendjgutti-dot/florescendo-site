@@ -9,6 +9,26 @@
       "source": "/catalogo/plantas/",
       "destination": "/catalogo/",
       "permanent": true
+    },
+    {
+      "source": "/locacao",
+      "destination": "/eventos/",
+      "permanent": true
+    },
+    {
+      "source": "/locacao/",
+      "destination": "/eventos/",
+      "permanent": true
+    },
+    {
+      "source": "/catalogo/flores-para-eventos",
+      "destination": "/eventos/",
+      "permanent": true
+    },
+    {
+      "source": "/catalogo/flores-para-eventos/",
+      "destination": "/eventos/",
+      "permanent": true
     }
   ]
 }
