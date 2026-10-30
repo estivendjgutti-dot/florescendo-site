@@ -1,5 +1,12 @@
 # Referências de design do site Florescendo
 
+## Fotos reais de orquídeas e suculentas — 30/10/2026
+
+- Substituídas as ilustrações das categorias por fotos reais do lote `Catalogo/Orquideas e suculentas`.
+- Tratamento convencional expressamente autorizado pelo cliente: luz, contraste, cor e nitidez leves; sem reconstrução generativa. Mestres privados em `Catalogo/Tratamento-convencional-2026-10-30`, com inventário de origem e hashes.
+- Mídias públicas em `photos/catalogo-real/`, com marca d'água, 480/960 px e ampliação. Preservar as capas 4:3 e os produtos inteiros; não cortar para preencher.
+- Oito fotos em Orquídeas, seis em Suculentas e terrários e dois detalhes decorativos no Catálogo. Não apresentar vasos de suculentas como terrários; não atribuir espécies/cultivares não confirmados. Ângulos semelhantes da orquídea amarela representam o mesmo exemplar.
+
 ## Celular da seção do Instagram
 
 - A referência fornecida pelo cliente para esta seção é o **iPhone 18 Duo dobrável**.
